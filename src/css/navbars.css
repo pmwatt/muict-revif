@@ -4,9 +4,9 @@ html, body {
 }
 
 /* import fronts Trialcodes @Junior */
-nav{
+/* nav{
   font-family: 'Secular One', sans-serif;
-}
+} */
 
 /* //////////////////// user's nav bar ///////////////////// */
 
@@ -22,6 +22,7 @@ nav{
 .user-navbar a,.admin-navbar a {
   text-decoration: none;
   color: white;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 /* //////////////////// user's nav bar ///////////////////// */

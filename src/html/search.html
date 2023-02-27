@@ -23,17 +23,26 @@
       <li><a href="/src/html/login-admin.html">Login</a></li>
     </ul>
   </nav>
-  <form>
-    <label for="search-criteria">Search by</label>
-    <select name="search-criteria" id="search-criteria">
-      <option value="commission-name">Commission Name</option>
-      <option value="artist-name">Artist Name</option>
-      <option value="genre">Genre</option>
-    </select>
-    <input type="text" id="search" name="search" placeholder="Search for your favourite art style">
-    <button>Search</button>
-  </form>
-
+	<section class="search">
+		<div class="search-heading">
+			<h1>
+				<span>
+					Find your <i>favourite</i> artist here.
+				</span>
+			</h1>
+		</div>
+		<div class="search-form">
+		  <form>
+		    <select name="search-criteria" id="search-criteria">
+		      <option value="commission-name">Commission Name</option>
+		      <option value="artist-name">Artist Name</option>
+		      <option value="genre">Genre</option>
+		    </select>
+		    <input type="text" id="search" name="search" placeholder="Search for your favourite art style">
+		    <button>Search</button>
+		  </form>
+		</div>
+	</section>
   <footer>
     <p>Copyright 2023 TPTPT Co. Ltd. All Rights Reserved</p>
   </footer>

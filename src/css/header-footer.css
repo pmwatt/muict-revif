@@ -4,3 +4,10 @@ header {
     padding: 20px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+
+footer {
+	background-color: black;
+	color: white;
+	padding: 20px;
+	font-family: sans-serif;
+}
