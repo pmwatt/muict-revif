@@ -5,61 +5,65 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="/src/css/global.css">
-	<link rel="stylesheet" href="/src/css/navbars.css">
-	<link rel="stylesheet" href="/src/css/header-footer.css">
-	<title>User Account Management</title>
+	<link rel="stylesheet" href="/src/css/global/global.css">
+	<link rel="stylesheet" href="/src/css/global/navbars.css">
+	<link rel="stylesheet" href="/src/css/global/header-footer.css">
+	<link rel="stylesheet" href="/src/css/user-account-management-admin.css">
+	<title>User Management</title>
 </head>
 
 <body>
+	<nav class="admin-navbar">
+		<ul>
+			<li><a href="/index.html">Back</a></li>
+			<li><a href="/src/html/user-account-management-admin.html">User Management</a></li>
+			<li><a href="/src/html/commission-service-management-admin.html">Commission Management</a></li>
+		</ul>
+	</nav>
 	<header>
 		<h1>User Account Management</h1>
 	</header>
-	<nav class="admin-navbar">
-		<ul>
-			<li><a href="/index.html">Back to Homepage</a></li>
-			<li><a href="/src/html/user-account-management-admin.html">User Account management</a></li>
-			<li><a href="/src/html/commission-service-management-admin.html">Commission Service Management</a></li>
-		</ul>
-	</nav>
-	<table>
-		<tr>
-			<th>User ID</th>
-			<th>Username</th> <!--Primary key-->
-			<th>Status</th> <!--banned/normal-->
-			<th>DOB</th>
-		</tr>
-		<tr>
-			<td>001</td>
-			<td>katokato</td>
-			<td>normal</td>
-			<td>12/05/1978</td>
-		</tr>
-		<tr>
-			<td>002</td>
-			<td>swordsgates</td>
-			<td>normal</td>
-			<td>12/05/1978</td>
-		</tr>
-		<tr>
-			<td>003</td>
-			<td>dededecrooke</td>
-			<td>normal</td>
-			<td>12/05/1978</td>
-		</tr>
-		<tr>
-			<td>004</td>
-			<td>sue_gudshoes</td>
-			<td>normal</td>
-			<td>12/05/1978</td>
-		</tr>
-		<tr>
-			<td>005</td>
-			<td>misato_plantman</td>
-			<td>normal</td>
-			<td>12/05/1978</td>
-		</tr>
-	</table>
+	<main>
+		<table>
+			<tr>
+				<th>User ID</th>
+				<th>Username</th> <!--Primary key-->
+				<th>Status</th> <!--banned/normal-->
+				<th>DOB</th>
+			</tr>
+			<tr>
+				<td>001</td>
+				<td>katokato</td>
+				<td>normal</td>
+				<td>12/05/1978</td>
+			</tr>
+			<tr>
+				<td>002</td>
+				<td>swordsgates</td>
+				<td>normal</td>
+				<td>12/05/1978</td>
+			</tr>
+			<tr>
+				<td>003</td>
+				<td>dededecrooke</td>
+				<td>normal</td>
+				<td>12/05/1978</td>
+			</tr>
+			<tr>
+				<td>004</td>
+				<td>sue_gudshoes</td>
+				<td>normal</td>
+				<td>12/05/1978</td>
+			</tr>
+			<tr>
+				<td>005</td>
+				<td>misato_plantman</td>
+				<td>normal</td>
+				<td>12/05/1978</td>
+			</tr>
+		</table>
+
+	</main>
 
 	<!--3 separated forms to add/remove/modify-->
 	<form>

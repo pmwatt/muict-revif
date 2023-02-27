@@ -12,17 +12,18 @@ html, body {
 
 .user-navbar ul,.admin-navbar ul{
   list-style: none;
-  background-color: rgb(53, 53, 53);
+  background-color: rgb(0, 0, 0);
   padding: 25px;
 
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
+  gap: 5%;
 }
 
 .user-navbar a,.admin-navbar a {
   text-decoration: none;
   color: white;
-	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /* //////////////////// user's nav bar ///////////////////// */

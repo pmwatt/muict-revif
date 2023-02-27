@@ -1,0 +1,18 @@
+header {
+    background-image: url("https://images.unsplash.com/photo-1590990986455-f1005948c18c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-size: 20px;
+    padding: 13% 50px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+}
+
+footer {
+	background-color: black;
+	color: white;
+	padding: 40px;
+	font-family: sans-serif;
+
+    text-align: center;
+}
