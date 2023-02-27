@@ -12,15 +12,16 @@ nav{
 
 .user-navbar ul,.admin-navbar ul{
   list-style: none;
-  background-color: green;
-  padding: 30px;
+  background-color: rgb(53, 53, 53);
+  padding: 25px;
 
   display: flex;
   justify-content: space-around;
 }
 
-a {
+.user-navbar a,.admin-navbar a {
   text-decoration: none;
+  color: white;
 }
 
 /* //////////////////// user's nav bar ///////////////////// */
