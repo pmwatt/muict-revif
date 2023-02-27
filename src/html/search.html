@@ -1,12 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search</title>
 </head>
+
 <body>
-    
+  <h1>Search</h1>
+  <nav>
+    <ul>
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="/src/html/about-us.html">About Us</a></li>
+      <li><a href="/src/html/search.html">Search</a></li>
+      <li><a href="/src/html/login-admin.html">Login</a></li>
+    </ul>
+  </nav>
+  <form>
+    <label for="search-criteria">Search by</label>
+    <select name="search-criteria" id="search-criteria">
+      <option value="commission-name">Commission Name</option>
+      <option value="artist-name">Artist Name</option>
+      <option value="genre">Genre</option>
+    </select>
+    <input type="text" id="search" name="search" placeholder="Search for your favourite art style">
+    <button>Search</button>
+  </form>
+  
+  <footer>
+    <p>Copyright 2023 TPTPT Co. Ltd. All Rights Reserved</p>
+  </footer>
 </body>
+<style>
+	
+</style>
+
 </html>
