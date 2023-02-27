@@ -1,0 +1,26 @@
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+/* import fronts Trialcodes @Junior */
+nav{
+  font-family: 'Secular One', sans-serif;
+}
+
+/* //////////////////// user's nav bar ///////////////////// */
+
+.user-navbar ul,.admin-navbar ul{
+  list-style: none;
+  background-color: green;
+  padding: 30px;
+
+  display: flex;
+  justify-content: space-around;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* //////////////////// user's nav bar ///////////////////// */

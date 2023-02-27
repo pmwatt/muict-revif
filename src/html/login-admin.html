@@ -5,12 +5,16 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/src/css/navbars.css">
+  <link rel="stylesheet" href="/src/css/header-footer.css">
   <title>Login</title>
 </head>
 
 <body>
-  <h1>Login</h1>
-  <nav>
+  <header>
+    <h1>Login</h1>
+  </header>
+  <nav class="admin-navbar">
     <ul>
       <li><a href="/index.html">Home</a></li>
       <li><a href="/src/html/about-us.html">About Us</a></li>
@@ -19,7 +23,7 @@
     </ul>
   </nav>
   <form>
-    
+
     <label for="username">Username:</label>
     <input type="text" id="username" name="username" placeholder="Enter your username">
 
@@ -27,7 +31,7 @@
     <input type="password" id="password" name="password" placeholder="Enter your password">
 
     <a href="/src/html/user-account-management-admin.html">Auto Login</button>
-    <button type="submit" href="/src/html/user-account-management-admin.html">Login</button>
+      <button type="submit" href="/src/html/user-account-management-admin.html">Login</button>
   </form>
   <footer>
     <p>Copyright 2023 TPTPT Co. Ltd. All Rights Reserved</p>
