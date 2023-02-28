@@ -16,13 +16,72 @@
 	<nav class="admin-navbar">
 		<ul>
 			<li><a href="../../index.html">Back</a></li>
-			<li><a href="./user-account-management-admin.html">User management</a></li>
+		</ul>
+		<ul>
+			<li><a href="./user-account-management-admin.html">User Management</a></li>
 			<li><a href="#">Commission Management</a></li>
 		</ul>
 	</nav>
 	<header>
 		<h1>Commission Service Management</h1>
 	</header>
+	<div class="admin-forms">
+		<div class="admin-add">
+			<h2>Add new Commission</h2>
+			<form action="">
+				<input type="text" placeholder="User ID">
+				<input type="text" placeholder="Username">
+				<input type="text" placeholder="DOB">
+				<button>Add</button>
+			</form>
+		</div>
+		<div class="admin-remove">
+			<h2>Remove Commission</h2>
+			<form action="">
+				<input type="text" placeholder="Commission ID">
+				<button>Search</button>
+			<div class="admin-search-result">
+				<table>
+					<tr>
+						<th>User ID</th>
+						<th>Username</th>
+						<th>Status</th>
+						<th>DOB</th>
+					</tr>
+					<tr>
+						<td>X</td>
+						<td>X</td>
+						<td>X</td>
+						<td>X</td>
+					</tr>
+				</table>
+			</div>
+			</form>
+		</div>
+		<div class="admin-modify">
+			<h2>Modify Commission</h2>
+			<form action="">
+				<input type="text" placeholder="Commission ID">
+				<button>Search</button>
+			</form>
+			<div class="admin-search-result">
+				<table>
+					<tr>
+						<th>User ID</th>
+						<th>Username</th>
+						<th>Status</th>
+						<th>DOB</th>
+					</tr>
+					<tr>
+						<td>X</td>
+						<td>X</td>
+						<td>X</td>
+						<td>X</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
 	<main>
 		<table>
 			<tr>
@@ -68,7 +127,6 @@
 				<td>200</td>
 			</tr>
 		</table>
-
 	</main>
 	<footer>
 		<p>Copyright 2023 TPTPT Co. Ltd. All Rights Reserved</p>

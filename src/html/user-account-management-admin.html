@@ -16,6 +16,8 @@
 	<nav class="admin-navbar">
 		<ul>
 			<li><a href="../../index.html">Back</a></li>
+		</ul>
+		<ul>
 			<li><a href="#">User Management</a></li>
 			<li><a href="./commission-service-management-admin.html">Commission Management</a></li>
 		</ul>
@@ -23,6 +25,63 @@
 	<header>
 		<h1>User Account Management</h1>
 	</header>
+	<div class="admin-forms">
+		<div class="admin-add">
+			<h2>Add New User</h2>
+			<form action="">
+				<input type="text" placeholder="User ID">
+				<input type="text" placeholder="Username">
+				<input type="text" placeholder="DOB">
+				<button>Add</button>
+			</form>
+		</div>
+		<div class="admin-remove">
+			<h2>Remove User</h2>
+			<form action="">
+				<input type="text" placeholder="Search">
+				<button>Search</button>
+			</form>
+			<div class="admin-search-result">
+				<table>
+					<tr>
+						<th>User ID</th>
+						<th>Username</th>
+						<th>Status</th>
+						<th>DOB</th>
+					</tr>
+					<tr>
+						<td>X</td>
+						<td>X</td>
+						<td>X</td>
+						<td>X</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div class="admin-modify">
+			<h2>Modify User</h2>
+			<form action="">
+				<input type="text" placeholder="User ID">
+				<button>Search</button>
+			</form>
+			<div class="admin-search-result">
+				<table>
+					<tr>
+						<th>User ID</th>
+						<th>Username</th>
+						<th>Status</th>
+						<th>DOB</th>
+					</tr>
+					<tr>
+						<td>X</td>
+						<td>X</td>
+						<td>X</td>
+						<td>X</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
 	<main>
 		<table>
 			<tr>
@@ -62,13 +121,9 @@
 				<td>12/05/1978</td>
 			</tr>
 		</table>
-
 	</main>
 
 	<!--3 separated forms to add/remove/modify-->
-	<form>
-		<label>Add</label>
-	</form>
 
 	<footer>
 		<p>Copyright 2023 TPTPT Co. Ltd. All Rights Reserved</p>

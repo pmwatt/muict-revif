@@ -10,14 +10,19 @@ html, body {
 
 /* //////////////////// user's nav bar ///////////////////// */
 
+nav {
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+}
+
 .user-navbar ul,.admin-navbar ul{
   list-style: none;
   background-color: rgb(0, 0, 0);
   padding: 25px;
 
   display: flex;
-  justify-content: flex-start;
-  gap: 5%;
+  gap: 25%;
 }
 
 .user-navbar a,.admin-navbar a {
