@@ -1,11 +1,3 @@
-main table {
-    background-color: black;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    width: 100%;
-    text-align: right;
-}
-
 .admin-forms {
     background-color: black;
     padding: 30px;
@@ -17,34 +9,129 @@ main table {
     justify-content: space-around;
 }
 
-.admin-add, .admin-remove, .admin-modify {
+.admin-forms h2 {
+    padding: 10px;
+    text-align: center;
+}
+
+.admin-add,
+.admin-remove,
+.admin-modify {
     font-family: Arial, Helvetica, sans-serif;
-    padding: 20px;
+    background-color: rgb(26, 26, 26);
+    padding: 10px 0;
+    margin: 15px 0;
+    border-radius: 15px;
+    width: 60%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.admin-search-result {
-    visibility: hidden;
+@media screen and (max-width: 728px) {
+
+    .admin-add,
+    .admin-remove,
+    .admin-modify {
+        width: 100%;
+    }
 }
 
-button {
+#remove-details,
+#modify-details {
+    visibility: collapse;
+    margin: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button.button-add {
     width: 60px;
-    height: 30px;
+    height: 35px;
     background-color: rgb(101, 161, 140);
     color: white;
     border: 0;
     border-radius: 7px;
 }
 
-input {
-    height: 30px;
-    border: 0;
-    border-radius: 5px;
+button.button-search {
+    width: 70px;
+    height: 35px;
+    background-color: rgb(120, 120, 120);
     color: white;
-    background-color: rgb(36, 36, 36);
+    border: 0;
+    border-radius: 10px;
+}
+
+button.button-confirm {
+    width: 140px;
+    height: 35px;
+    background-color: rgb(101, 161, 140);
+    color: white;
+    border: 0;
+    border-radius: 10px;
+}
+
+input {
+    height: 35px;
+    border: 0;
+    border-radius: 10px;
+    color: white;
+    background-color: rgb(57, 57, 57);
+    padding-right: 10px;
+    padding-left: 10px;
 }
 
 .admin-add form {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.modify-form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     gap: 10px;
+}
+
+.modify-form p {
+    text-align: center;
+    color: rgb(160, 160, 160);
+    font-size: small;
+}
+
+.search-result-table {
+    display: flex;
+    flex-direction: row;
+}
+
+.search-result-table div {
+    padding: 7px;
+    margin: 20px 3px;
+    background-color: rgb(0, 0, 0);
+    color: rgb(155, 155, 155);
+    border-radius: 10px;
+}
+
+div.table-row {
+    white-space: nowrap;
+    overflow-x: auto;
+    max-width: 400px;
+}
+
+@media screen and (max-width: 1000px) {
+    div.table-row {
+        max-width: 200px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    div.table-row {
+        max-width: 100px;
+    }
 }

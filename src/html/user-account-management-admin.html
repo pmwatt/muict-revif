@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="aaaaaaaaaaaaaaaaaaaaaaa-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="../css/global/global.css">
 	<link rel="stylesheet" href="../css/global/navbars.css">
@@ -25,109 +25,148 @@
 	<header>
 		<h1>User Account Management</h1>
 	</header>
-	<div class="admin-forms">
-		<div class="admin-add">
-			<h2>Add New User</h2>
-			<form action="">
-				<input type="text" placeholder="User ID">
-				<input type="text" placeholder="Username">
-				<input type="text" placeholder="DOB">
-				<button>Add</button>
-			</form>
-		</div>
-		<div class="admin-remove">
-			<h2>Remove User</h2>
-			<form action="">
-				<input type="text" placeholder="Search">
-				<button>Search</button>
-			</form>
-			<div class="admin-search-result">
-				<table>
-					<tr>
-						<th>User ID</th>
-						<th>Username</th>
-						<th>Status</th>
-						<th>DOB</th>
-					</tr>
-					<tr>
-						<td>X</td>
-						<td>X</td>
-						<td>X</td>
-						<td>X</td>
-					</tr>
-				</table>
-			</div>
-		</div>
-		<div class="admin-modify">
-			<h2>Modify User</h2>
-			<form action="">
-				<input type="text" placeholder="User ID">
-				<button>Search</button>
-			</form>
-			<div class="admin-search-result">
-				<table>
-					<tr>
-						<th>User ID</th>
-						<th>Username</th>
-						<th>Status</th>
-						<th>DOB</th>
-					</tr>
-					<tr>
-						<td>X</td>
-						<td>X</td>
-						<td>X</td>
-						<td>X</td>
-					</tr>
-				</table>
-			</div>
-		</div>
-	</div>
 	<main>
-		<table>
-			<tr>
-				<th>User ID</th>
-				<th>Username</th> <!--Primary key-->
-				<th>Status</th> <!--banned/normal-->
-				<th>DOB</th>
-			</tr>
-			<tr>
-				<td>001</td>
-				<td>katokato</td>
-				<td>normal</td>
-				<td>12/05/1978</td>
-			</tr>
-			<tr>
-				<td>002</td>
-				<td>swordsgates</td>
-				<td>normal</td>
-				<td>12/05/1978</td>
-			</tr>
-			<tr>
-				<td>003</td>
-				<td>dededecrooke</td>
-				<td>normal</td>
-				<td>12/05/1978</td>
-			</tr>
-			<tr>
-				<td>004</td>
-				<td>sue_gudshoes</td>
-				<td>normal</td>
-				<td>12/05/1978</td>
-			</tr>
-			<tr>
-				<td>005</td>
-				<td>misato_plantman</td>
-				<td>normal</td>
-				<td>12/05/1978</td>
-			</tr>
-		</table>
+		<div class="admin-forms">
+			<div class="admin-add">
+				<h2>Add New User</h2>
+				<form action="">
+					<input type="text" placeholder="User ID">
+					<input type="text" placeholder="Username">
+					<input type="text" placeholder="First Name">
+					<input type="text" placeholder="Last Name">
+					<input type="text" placeholder="Skill">
+					<p>Date of Birth</p>
+					<input type="date" placeholder="DOB">
+					<input type="text" placeholder="Phone No.">
+					<input type="text" placeholder="Email">
+					<input type="text" placeholder="Password">
+					<button type="button" class="button-confirm">Confirm Add</button>
+				</form>
+			</div>
+			<div class="admin-remove">
+				<h2>Remove User</h2>
+				<form action="">
+					<input type="text" placeholder="User ID">
+					<button type="button" class="button-search" onclick="showRemoveTable()">Search</button>
+				</form>
+				<div id="remove-details">
+					<div id="remove-table" class="search-result-table">
+						<div class="table-header">
+							<div>User ID</div>
+							<div>Username</div>
+							<div>First Name</div>
+							<div>Last Name</div>
+							<div>Skill</div>
+							<div>DOB</div>
+							<div>Phone</div>
+							<div>Email</div>
+							<div>Password</div>
+						</div>
+						<div class="table-row">
+							<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores expedita laborum velit
+								tempora autem numquam tenetur neque quo voluptas vel at, perferendis placeat
+								exercitationem consequatur asperiores ex eos ullam veniam?</div>
+							<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores expedita laborum velit
+								tempora autem numquam tenetur neque quo voluptas vel at, perferendis placeat
+								exercitationem consequatur asperiores ex eos ullam veniam?</div>
+							<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores expedita laborum velit
+								tempora autem numquam tenetur neque quo voluptas vel at, perferendis placeat
+								exercitationem consequatur asperiores ex eos ullam veniam?</div>
+							<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores expedita laborum velit
+								tempora autem numquam tenetur neque quo voluptas vel at, perferendis placeat
+								exercitationem consequatur asperiores ex eos ullam veniam?</div>
+							<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores expedita laborum velit
+								tempora autem numquam tenetur neque quo voluptas vel at, perferendis placeat
+								exercitationem consequatur asperiores ex eos ullam veniam?</div>
+							<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores expedita laborum velit
+								tempora autem numquam tenetur neque quo voluptas vel at, perferendis placeat
+								exercitationem consequatur asperiores ex eos ullam veniam?</div>
+							<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores expedita laborum velit
+								tempora autem numquam tenetur neque quo voluptas vel at, perferendis placeat
+								exercitationem consequatur asperiores ex eos ullam veniam?</div>
+							<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores expedita laborum velit
+								tempora autem numquam tenetur neque quo voluptas vel at, perferendis placeat
+								exercitationem consequatur asperiores ex eos ullam veniam?</div>
+							<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores expedita laborum velit
+								tempora autem numquam tenetur neque quo voluptas vel at, perferendis placeat
+								exercitationem consequatur asperiores ex eos ullam veniam?</div>
+						</div>
+					</div>
+					<button type="button" class="button-confirm">Confirm Remove</button>
+				</div>
+			</div>
+			<div class="admin-modify">
+				<h2>Modify User</h2>
+				<form action="">
+					<input type="text" placeholder="User ID">
+					<button type="button" onclick="showModifyTable()" class="button-search">Search</button>
+				</form>
+				<div id="modify-details">
+					<div id="modify-table" class="search-result-table">
+						<div class="table-header">
+							<div>User ID</div>
+							<div>Username</div>
+							<div>First Name</div>
+							<div>Last Name</div>
+							<div>Skill</div>
+							<div>DOB</div>
+							<div>Phone</div>
+							<div>Email</div>
+							<div>Password</div>
+						</div>
+						<div class="table-row">
+							<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores expedita laborum velit
+								tempora autem numquam tenetur neque quo voluptas vel at, perferendis placeat
+								exercitationem consequatur asperiores ex eos ullam veniam?</div>
+							<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores expedita laborum velit
+								tempora autem numquam tenetur neque quo voluptas vel at, perferendis placeat
+								exercitationem consequatur asperiores ex eos ullam veniam?</div>
+							<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores expedita laborum velit
+								tempora autem numquam tenetur neque quo voluptas vel at, perferendis placeat
+								exercitationem consequatur asperiores ex eos ullam veniam?</div>
+							<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores expedita laborum velit
+								tempora autem numquam tenetur neque quo voluptas vel at, perferendis placeat
+								exercitationem consequatur asperiores ex eos ullam veniam?</div>
+							<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores expedita laborum velit
+								tempora autem numquam tenetur neque quo voluptas vel at, perferendis placeat
+								exercitationem consequatur asperiores ex eos ullam veniam?</div>
+							<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores expedita laborum velit
+								tempora autem numquam tenetur neque quo voluptas vel at, perferendis placeat
+								exercitationem consequatur asperiores ex eos ullam veniam?</div>
+							<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores expedita laborum velit
+								tempora autem numquam tenetur neque quo voluptas vel at, perferendis placeat
+								exercitationem consequatur asperiores ex eos ullam veniam?</div>
+							<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores expedita laborum velit
+								tempora autem numquam tenetur neque quo voluptas vel at, perferendis placeat
+								exercitationem consequatur asperiores ex eos ullam veniam?</div>
+							<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores expedita laborum velit
+								tempora autem numquam tenetur neque quo voluptas vel at, perferendis placeat
+								exercitationem consequatur asperiores ex eos ullam veniam?</div>
+						</div>
+					</div>
+					<form action="" class="modify-form">
+						<p class="form-txt">Enter new details.<br>Leave blank if unchanged.</p>
+						<input type="text" placeholder="User ID">
+						<input type="text" placeholder="Username">
+						<input type="text" placeholder="First Name">
+						<input type="text" placeholder="Last Name">
+						<input type="text" placeholder="Skill">
+						<p class="form-txt">Date Of Birth</p>
+						<input type="date" placeholder="DOB">
+						<input type="text" placeholder="Phone No.">
+						<input type="text" placeholder="Email">
+						<input type="text" placeholder="Password">
+						<button type="button" class="button-confirm">Confirm Changes</button>
+					</form>
+				</div>
+			</div>
+		</div>
 	</main>
-
-	<!--3 separated forms to add/remove/modify-->
 
 	<footer>
 		<p>Copyright 2023 TPTPT Co. Ltd. All Rights Reserved</p>
 	</footer>
 </body>
+<script src="../js/toggle-admin-management-details.js"></script>
 
 </html>

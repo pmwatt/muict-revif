@@ -19,10 +19,10 @@ nav {
 .user-navbar ul,.admin-navbar ul{
   list-style: none;
   background-color: rgb(0, 0, 0);
-  padding: 25px;
+  padding: 20px;
 
   display: flex;
-  gap: 25%;
+  gap: 10%;
 }
 
 .user-navbar a,.admin-navbar a {
