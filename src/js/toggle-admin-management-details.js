@@ -11,7 +11,7 @@ function showRemoveTable() {
 
     // found
     const modifyTable = document.getElementById("remove-details");
-    modifyTable.setAttribute("style", "visibility: visible");
+    modifyTable.setAttribute("style", "display: flex");
 }
 
 function showModifyTable() {
@@ -26,5 +26,5 @@ function showModifyTable() {
 
     // found
     const modifyTable = document.getElementById("modify-details");
-    modifyTable.setAttribute("style", "visibility: visible");
+    modifyTable.setAttribute("style", "display: flex");
 }

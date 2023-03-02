@@ -1,3 +1,9 @@
+p {
+    text-align: center;
+    color: rgb(160, 160, 160);
+    font-size: small;
+}
+
 .admin-forms {
     background-color: black;
     padding: 30px;
@@ -14,38 +20,39 @@
     text-align: center;
 }
 
-.admin-add,
-.admin-remove,
-.admin-modify {
+#admin-add,
+#admin-remove,
+#admin-modify {
     font-family: Arial, Helvetica, sans-serif;
     background-color: rgb(26, 26, 26);
-    padding: 10px 0;
+    padding: 20px 8%;
     margin: 15px 0;
     border-radius: 15px;
-    width: 60%;
 
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-@media screen and (max-width: 728px) {
-
-    .admin-add,
-    .admin-remove,
-    .admin-modify {
-        width: 100%;
-    }
+/* hidden by default */
+#admin-remove,
+#admin-modify {
+    display: none;
 }
 
 #remove-details,
 #modify-details {
-    visibility: collapse;
     margin: 10px;
 
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
+}
+
+.search-form {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
 }
 
 button.button-add {
@@ -69,7 +76,7 @@ button.button-search {
 button.button-confirm {
     width: 140px;
     height: 35px;
-    background-color: rgb(101, 161, 140);
+    background-color: #65a18c;
     color: white;
     border: 0;
     border-radius: 10px;
@@ -85,7 +92,7 @@ input {
     padding-left: 10px;
 }
 
-.admin-add form {
+#admin-add form {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -99,11 +106,6 @@ input {
     gap: 10px;
 }
 
-.modify-form p {
-    text-align: center;
-    color: rgb(160, 160, 160);
-    font-size: small;
-}
 
 .search-result-table {
     display: flex;
@@ -131,7 +133,28 @@ div.table-row {
 }
 
 @media screen and (max-width: 500px) {
-    div.table-row {
+    div.table-row, div.table-header {
         max-width: 100px;
     }
+}
+
+/* --------------------------------- */
+
+.admin-menu {
+    background-color: black;
+    padding: 20px 10%;
+
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.admin-menu button {
+    height: 30px;
+    background-color: #65a18c;
+    color: white;
+    border: 0;
+    border-radius: 10px;
+
+    flex-grow: 1;
 }
