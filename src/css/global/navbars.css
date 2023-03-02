@@ -1,22 +1,20 @@
-html, body {
+/* html, body {
   height: 100%;
   width: 100%;
-}
-
-/* import fronts Trialcodes @Junior */
-/* nav{
-  font-family: 'Secular One', sans-serif;
 } */
+
 
 /* //////////////////// user's nav bar ///////////////////// */
 
 nav {
   background-color: black;
+  text-align: center;
+
   display: flex;
   justify-content: space-between;
 }
 
-.user-navbar ul,.admin-navbar ul{
+.user-navbar ul,.admin-navbar ul,.detail-navbar ul {
   list-style: none;
   background-color: rgb(0, 0, 0);
   padding: 20px;
@@ -25,7 +23,7 @@ nav {
   gap: 10%;
 }
 
-.user-navbar a,.admin-navbar a {
+.user-navbar a,.admin-navbar a,.detail-navbar a {
   text-decoration: none;
   color: white;
   font-family: Arial, Helvetica, sans-serif;

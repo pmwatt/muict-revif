@@ -1,0 +1,114 @@
+body {
+    font-family: sans-serif;
+    color: white;
+}
+
+h3 {
+    font-weight: 100;
+    padding: 10px 0;
+}
+
+header {
+    background-image: url('https://images.unsplash.com/photo-1514195037031-83d60ed3b448?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80');
+}
+
+header h1 {
+    text-align: left;
+}
+
+.commission-title {
+    height: max-content;
+}
+
+.contact-info,
+.commission-info,
+.artist-info {
+    background-color: black;
+    color: white;
+    padding: 30px;
+
+}
+
+.contact-info div,
+.commission-info div,
+.artist-info div {
+    background-color: #292929;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.contact-info div {
+    background-color: #538f76;
+}
+
+.container {
+    padding: 10px;
+
+    /* Hint: Put your Flex CSS code here to organize each section */
+    display: flex;
+    flex-direction: column;
+    background-color: #000000;
+}
+
+/* .column {
+    padding: 20px;
+    margin: 10px;
+    border-radius: 20px;
+    background-color: #212121;
+} */
+
+/* .dummy_box {
+    margin: auto;
+    margin-top: 10px;
+    width: 100%;
+    height: 200px;
+    border-radius: 20px;
+} */
+
+@media screen and (min-width: 768px) {
+    .container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    /* .column {
+        width: 25vw;
+        
+    } */
+}
+
+/* from user/commission management pages */
+
+.search-result-table {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.search-result-table div {
+    padding: 2px 7px;
+    margin: 20px 3px;
+    background-color: rgb(0, 0, 0);
+    color: rgb(155, 155, 155);
+    border-radius: 10px;
+}
+
+div.table-row,
+div.table-header {
+    white-space: nowrap;
+    overflow-x: auto;
+    max-width: 500px;
+}
+
+@media screen and (max-width: 1000px) {
+    div.table-row {
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    div.table-row, div.table-header {
+        width: 100px;
+    }
+}

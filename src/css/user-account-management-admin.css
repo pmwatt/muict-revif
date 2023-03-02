@@ -1,3 +1,7 @@
+header, footer {
+    background-image: url("https://images.unsplash.com/photo-1590990986455-f1005948c18c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+}
+
 p {
     text-align: center;
     color: rgb(160, 160, 160);
