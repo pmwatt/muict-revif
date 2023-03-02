@@ -1,0 +1,132 @@
+/* Normal mode */
+::selection {
+    background-color: white;
+    /* black color */
+    color: black;
+    /* white color */
+}
+
+main {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: black;
+    color: white;
+}
+
+article {
+    display: flex;
+    /* set display property to flex for easy alignment */
+    align-items: center;
+    /* center vertically */
+    flex-direction: row-reverse;
+}
+
+article:nth-child(odd) {
+    flex-direction: row;
+}
+
+
+#ourteam img {
+    width: 40vw;
+    height: auto;
+    padding: 2vw;
+}
+
+.description {
+    width: auto;
+    height: auto;
+    padding: 2vw;
+}
+
+h3,
+h6,
+hr {
+    position: relative;
+}
+
+
+h3 {
+    font-size: 3vw;
+}
+
+h6 {
+    margin-top: 0.3vw;
+    font-size: medium;
+}
+
+hr {
+
+    border-color: white;
+    border-width: 0.7px;
+}
+
+.personIntro {
+    margin-top: 2vw;
+    font-size: medium;
+}
+
+#about {
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+}
+
+#about p {
+    padding: 8vw;
+    font-size: x-large;
+}
+
+#vision p {
+    padding: 5vw;
+    font-size: x-large;
+}
+
+.xx_large {
+    font-size: 5vw;
+}
+
+.line-height_1_5 {
+    line-height: 1.5;
+}
+
+.line-height_2_0 {
+    line-height: 2;
+}
+
+.container {
+    display: flex;
+    /* set display property to flex for easy alignment */
+    flex-direction: column;
+    margin: auto;
+    position: relative;
+}
+
+.topic {
+
+    font-size: 10vw;
+    color: rgb(0, 0, 0);
+    text-shadow: 4px 4px rgb(255, 255, 255);
+    z-index: 1;
+    position: absolute;
+    top: 16vw;
+    /* Position the text at the top of the container */
+    left: 2vw;
+    /* Position the text at the left of the container */
+}
+
+.backgroundImg {
+    display: block;
+    width: 100vw;
+    height: 40vw;
+
+}
+
+
+.larger-text {
+    font-size: larger;
+}
+
+.team_container {
+    padding: 3vw;
+    padding-top: 6vw;
+    padding-right: 0;
+}
