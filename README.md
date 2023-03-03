@@ -31,12 +31,14 @@ This project was inspired from sites such as [Fiverr](https://www.fiverr.com/) a
       2. `global.css`
       3. `header-footer.css`
       4. `login-admin.css`
+   2. This serves as a gateway login page for administrator. After authentication, the admin would be able to add/remove/modify user and commission information.
 3. Search Page (`search.html`)
    1. The followwing CSS are applied:
       1. `navbars.css`
       2. `global.css`
       3. `header-footer.css`
       4. `search.css`
+   2. This serves as a page for user to search for commissions. As of the current version (Phase 1, 03/03/23), the search functionality purely returns every detail pages' information, and serves as a hub for the detail pages.
 4. Detail Page (`detail1.html`, `detail2.html`, `detail3.html`, `detail4.html`, `detail5.html`)
    1. The followwing CSS are applied:
       1. `navbars.css`
