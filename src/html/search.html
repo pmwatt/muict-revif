@@ -49,7 +49,8 @@
 			<form class="search-bar"> <!--The Search bar-->
 				<input type="text" placeholder="What's your inspiration?">
 				<!--Text input element for user to type their search-->
-				<button type="button" onclick="showResult()" class="button-search" type="submit">Search</button> <!--Button element to activate search engine-->
+				<button type="button" onclick="showResult()" class="button-search" type="submit">Search</button>
+				<!--Button element to activate search engine-->
 			</form>
 		</div>
 	</section>
@@ -58,47 +59,61 @@
 	<section id="result"> <!--Section for results of the search to appear-->
 		<!--result format. these are just examples of the result. There will be some changes after search bar is fully functional-->
 		<div class="item-container"> <!--flex container for the results-->
-			<a href="detail-pages/detail1.html" class="result-items" id="result1">
-				<!--The result which is also a link to their detail page-->
-				<figure><img
-						src="https://images.unsplash.com/photo-1615184697985-c9bde1b07da7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
-						width="300" height="200"></figure><br> <!--brief information with image-->
-				<b class="commission-name">Commission Anime Cheap Kato</b><br>
-				<!--Make commission name bold for highlighting-->
-				<p>by Michael J. Sharps</p><br>
-				<p>Rate per Hour: $299</p>
-			</a>
-			<a href="detail-pages/detail2.html" class="result-items" id="result2"> <!--The rest of the results-->
-				<figure><img
-						src="https://images.unsplash.com/photo-1604871000636-074fa5117945?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80"
-						width="300" height="200"></figure><br>
-				<b class="commission-name">Corporate Art Gatesword</b><br>
-				<p>by Gordon Ramsay</p><br>
-				<p>Rate per Hour: $299</p>
-			</a>
-			<a href="detail-pages/detail3.html" class="result-items" id="result3">
-				<figure><img
-						src="https://images.unsplash.com/photo-1612107634878-93569d1ecc06?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-						width="300" height="200"></figure><br>
-				<b class="commission-name">Dede Realism Commission</b><br>
-				<p>by Jake Kauffman</p><br>
-				<p>Rate per Hour: $299</p>
-			</a>
-			<a href="detail-pages/detail4.html" class="result-items" id="result4">
-				<figure><img
-						src="https://images.unsplash.com/photo-1604871038809-0462d7c3a3a0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-						width="300" height="200"></figure><br>
-				<b class="commission-name">Gudshoes Animation</b><br>
-				<p>by Haititi Lam</p><br>
-				<p>Rate per Hour: $299</p>
-			</a>
-			<a href="detail-pages/detail5.html" class="result-items" id="result5">
-				<figure><img src="https://images.unsplash.com/photo-1608501773255-d8cd9e5ba968?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE1fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60" width="300"
-						height="200"></figure><br>
-				<b class="commission-name">Plantman Pixelart</b><br>
-				<p>by Jorden E. Peterson</p><br>
-				<p>Rate per Hour: $299</p>
-			</a>
+			<ul>
+				<li>
+					<a href="detail-pages/detail1.html" class="result-items" id="result1">
+						<!--The result which is also a link to their detail page-->
+						<figure><img
+								src="https://images.unsplash.com/photo-1615184697985-c9bde1b07da7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
+								width="300" height="200"></figure><br> <!--brief information with image-->
+						<b class="commission-name">Commission Anime Cheap Kato</b><br>
+						<!--Make commission name bold for highlighting-->
+						<p>by Michael J. Sharps</p><br>
+						<p>Rate per Hour: $299</p>
+					</a>
+				</li>
+				<li>
+					<a href="detail-pages/detail2.html" class="result-items" id="result2">
+						<!--The rest of the results-->
+						<figure><img
+								src="https://images.unsplash.com/photo-1604871000636-074fa5117945?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80"
+								width="300" height="200"></figure><br>
+						<b class="commission-name">Corporate Art Gatesword</b><br>
+						<p>by Gordon Ramsay</p><br>
+						<p>Rate per Hour: $299</p>
+					</a>
+				</li>
+				<li>
+					<a href="detail-pages/detail3.html" class="result-items" id="result3">
+						<figure><img
+								src="https://images.unsplash.com/photo-1612107634878-93569d1ecc06?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+								width="300" height="200"></figure><br>
+						<b class="commission-name">Dede Realism Commission</b><br>
+						<p>by Jake Kauffman</p><br>
+						<p>Rate per Hour: $299</p>
+					</a>
+				</li>
+				<li>
+					<a href="detail-pages/detail4.html" class="result-items" id="result4">
+						<figure><img
+								src="https://images.unsplash.com/photo-1604871038809-0462d7c3a3a0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+								width="300" height="200"></figure><br>
+						<b class="commission-name">Gudshoes Animation</b><br>
+						<p>by Haititi Lam</p><br>
+						<p>Rate per Hour: $299</p>
+					</a>
+				</li>
+				<li>
+					<a href="detail-pages/detail5.html" class="result-items" id="result5">
+						<figure><img
+								src="https://images.unsplash.com/photo-1608501773255-d8cd9e5ba968?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE1fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60"
+								width="300" height="200"></figure><br>
+						<b class="commission-name">Plantman Pixelart</b><br>
+						<p>by Jorden E. Peterson</p><br>
+						<p>Rate per Hour: $299</p>
+					</a>
+				</li>
+			</ul>
 		</div>
 	</section>
 	<footer> <!--Footer section for technical information which is also in the same format as other pages-->
