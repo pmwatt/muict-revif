@@ -1,7 +1,7 @@
 # REVIF - Art Commission Site
 ## Introduction
 This project is a part of **ITCS212 Introduction to Web Programming** course at MUICT.
-See the project repository on [GitHub](https://github.com/pmwatt/muict-webprog.git) and live preview on [GitHub Pages](https://pmwatt.github.io/muict-webprog/).
+See the project repository on [GitHub](https://github.com/pmwatt/muict-webprog.git) and live preview on [GitHub Pages](https://pmwatt.github.io/muict-revif/).
 
 This project was inspired from sites such as [Fiverr](https://www.fiverr.com/) and [Deviant](https://www.deviantart.com/).
 
@@ -45,12 +45,14 @@ This project was inspired from sites such as [Fiverr](https://www.fiverr.com/) a
       2. `global.css`
       3. `header-footer.css`
       4. `details.css
+   2. This serves as a detail page listing user's commission details, artist details, as well as contact details for commissions. The navigation bar in these pages should return user back to the previous search page result.
 5. Commission Service Management (`commission-service-management-admin.html`)
    1. The followwing CSS are applied:
       1. `navbars.css`
       2. `global.css`
       3. `header-footer.css`
       4. `commission-service-management-admin.css`
+   2. 
 6. User Account Management (`user-account-management-admin.html`)
    1. The followwing CSS are applied:
       1. `navbars.css`

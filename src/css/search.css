@@ -1,96 +1,132 @@
-*{
+*{ /*Set global text to be white to make them visible*/
 	color: white;
 }
 
-.search {
-	
+.search { /*background cover for search section*/
 	background-size: 100%;
 	padding: 10%;
 	background-color:rgb(16, 16, 16);
 }
 
-.text{
+.text{ /*Decorative text in search section*/
 	text-align: center;
 	font-size: 200%;
 	padding: 3%;
 }
 
-.criterias{
+#form-criterias{ /*Radios on criterias for the search*/
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	gap: 20px;
+}
+
+#search-criteria-container {
+	font-size: 20px;
+	padding: 20px;
+
 	display: flex;
 	justify-content: center;
-	font-size: 150%;
-	padding: 5%;
+	gap: 20px;
 }
 
-.criterias input{
-	width: 5%;
-	border: 0px;
+#form-label {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: 20px;
 }
 
-.search-container{
+.search-container{ /*Set search bar to center with flex*/
 	display: flex;
 	justify-content: center;
 }
 
-.search-bar{
+.search-bar{ /*adjust search bar elements to make it more responsive with flex, and customize its look*/
 	background: white;
 	display: flex;
+	flex-wrap: nowrap;
 	justify-content: space-between;
-	flex-wrap: wrap;
+
 	border-radius: 60px;
-	width: 500px;
+	width: 1000px;
 	padding: 1%;
 }
 
-.search-bar input{
+.search-bar input{ /*Customize input box to blend in with search bar and adjust its size*/
 	color:black;
 	background: transparent;
 	border: 0;
 	outline: none;
-	font-size: 20px;
+
+	font-size: small;
+	padding: 10px;
 	width: 82%;
 }
 
-.search-bar button{
+.search-bar button{ /*Customize button look*/
 	color:white;
-	background-color: rgb(47, 47, 47);
+	background-color: rgb(0, 0, 0);
 	border-radius: 60px;
-	padding: 3%;
+	padding: 2% 3%;
 	border: 0px;
 	outline: none;
 }
 
-.result{
+.search-bar button:active{ /*Button will change color after clicking*/
+	background-color: rgb(28, 172, 102);
+}
+
+#result{ /*Background cover for result section*/
 	padding: 10px;
 	background-size: 100%;
 	background-color:rgb(16, 16, 16);
+
+	display: none;
 }
 
-.item-container{
+.item-container{ /*Adjust the results position to the with flex so it will be more responsive*/
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	justify-content: start;
 	justify-content: space-evenly;
 	align-items: center;
 }
 
-.result-items{
+.item-container img {
+	border-radius: 10px;
+	height: 100%;
+	max-height: 200px;
+}
+
+.result-items{ /*Make the results appear as fixed boxes and adjust its elements in column format with flex*/
 	height: 350px;
 	width: 350px;
+
 	background-color: rgb(48, 48, 48);
 	color: black;
+	text-decoration: none;
+
 	border-radius: 30px;
 	padding: 1%;
 	margin: 1%;
+
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 }
 
-.button-more button {
-	background-color: rgb(32, 174, 124);
-	/* color: white; */
-	text-align: center;
+.commission-name{ /*Enlarge commission name to make it stand out*/
+	font-size: 20px;
+}
+
+.result-items:hover{ /*There will be outline on the result with mouse hover over it*/
+	outline: 5px;
+	outline-style:outset;
+	outline-color: white;
+}
+
+.result-items:active{ /*result will change its color upon clicking*/
+	background-color: rgb(134, 134, 134);
 }

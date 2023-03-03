@@ -6,14 +6,16 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="../css/global/global.css">
+	<!--Internal CSS for global elements such nav bar, header, and footer-->
 	<link rel="stylesheet" href="../css/global/navbars.css">
 	<link rel="stylesheet" href="../css/global/header-footer.css">
-	<link rel="stylesheet" href="../css/search.css">
+	<link rel="stylesheet" href="../css/search.css"> <!--Internal CSS for search.html specifically-->
 	<title>Search</title>
 </head>
 
 <body>
 	<nav class="user-navbar">
+		<!--Nav bar for navigating to other pages in the website which is in the same format as other pages-->
 		<ul>
 			<li><a href="../../index.html">Home</a></li>
 			<li><a href="./about-us.html">About Us</a></li>
@@ -23,79 +25,84 @@
 			<li><a href="./login-admin.html">Staff Portal</a></li>
 		</ul>
 	</nav>
-	<header>
+	<header> <!--Heading for idicating current page which is in the same format as other pages-->
 		<h1>Search</h1>
 	</header>
-	<section class="search">
-		<div class="text">
+	<section class="search"> <!--A section mainly for search bar with couple decorative text-->
+		<div class="text"> <!--Decorative text for clarification-->
 			<h1>Looking for a commission?</h1>
 			<h1>Search here!</h1>
 		</div>
-		<div class="criterias">
-			<input type="radio" name="criteria" value="commission" checked>commission
-			<input type="radio" name="criteria" value="artist">artist
-			<input type="radio" name="criteria" value="genre">genre
+		<div id="search-criteria-container">
+			<form id="form-criterias"> <!--Radios for user to choose criteria in their search-->
+				<input type="radio" name="criteria" value="commission" checked>
+				<input type="radio" name="criteria" value="artist">
+				<input type="radio" name="criteria" value="genre">
+			</form>
+			<div id="form-label">
+				<p>Commission Name</p>
+				<p>Artist Name</p>
+				<p>Tag Name (Theme)</p>
+			</div>
 		</div>
-		<div class="search-container">
-			<form class="search-bar">
-				<input type="text" placeholder="Search...">
-
-				<button type="submit">Search</button>
+		<div class="search-container"> <!--flex container for search bar-->
+			<form class="search-bar"> <!--The Search bar-->
+				<input type="text" placeholder="What's your inspiration?">
+				<!--Text input element for user to type their search-->
+				<button type="button" onclick="showResult()" class="button-search" type="submit">Search</button> <!--Button element to activate search engine-->
 			</form>
 		</div>
 	</section>
-	<section class="result">
-		This is result (this does not represent final product since they are supposed to be shown when click search)
-		<div class="item-container">
-			<div class="result-items" id="result1">
-				<figure><img src="https://img.freepik.com/free-icon/important-person_318-10744.jpg?w=2000" width="300"
+	<section id="result"> <!--Section for results of the search to appear-->
+		<!--result format. these are just examples of the result. There will be some changes after search bar is fully functional-->
+		<div class="item-container"> <!--flex container for the results-->
+			<a href="detail-pages/detail1.html" class="result-items" id="result1">
+				<!--The result which is also a link to their detail page-->
+				<figure><img
+						src="https://images.unsplash.com/photo-1615184697985-c9bde1b07da7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
+						width="300" height="200"></figure><br> <!--brief information with image-->
+				<b class="commission-name">Commission Anime Cheap Kato</b><br>
+				<!--Make commission name bold for highlighting-->
+				<p>by Michael J. Sharps</p><br>
+				<p>Rate per Hour: $299</p>
+			</a>
+			<a href="detail-pages/detail2.html" class="result-items" id="result2"> <!--The rest of the results-->
+				<figure><img
+						src="https://images.unsplash.com/photo-1604871000636-074fa5117945?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80"
+						width="300" height="200"></figure><br>
+				<b class="commission-name">Corporate Art Gatesword</b><br>
+				<p>by Gordon Ramsay</p><br>
+				<p>Rate per Hour: $299</p>
+			</a>
+			<a href="detail-pages/detail3.html" class="result-items" id="result3">
+				<figure><img
+						src="https://images.unsplash.com/photo-1612107634878-93569d1ecc06?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+						width="300" height="200"></figure><br>
+				<b class="commission-name">Dede Realism Commission</b><br>
+				<p>by Jake Kauffman</p><br>
+				<p>Rate per Hour: $299</p>
+			</a>
+			<a href="detail-pages/detail4.html" class="result-items" id="result4">
+				<figure><img
+						src="https://images.unsplash.com/photo-1604871038809-0462d7c3a3a0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+						width="300" height="200"></figure><br>
+				<b class="commission-name">Gudshoes Animation</b><br>
+				<p>by Haititi Lam</p><br>
+				<p>Rate per Hour: $299</p>
+			</a>
+			<a href="detail-pages/detail5.html" class="result-items" id="result5">
+				<figure><img src="https://images.unsplash.com/photo-1608501773255-d8cd9e5ba968?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE1fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60" width="300"
 						height="200"></figure><br>
-				<p>XXXXXXXXXX</p><br>
-				<p>by XXXXX</p><br>
-				<p>Minimum wage: XXXXX</p>
-				<button><a class="button-more" href="./detail-pages/detail1.html">More Details</a></button>
-
-			</div>
-			<div class="result-items" id="result2">
-				<figure><img src="https://img.freepik.com/free-icon/important-person_318-10744.jpg?w=2000" width="300"
-						height="200"></figure><br>
-				<p>XXXXXXXXXX</p><br>
-				<p>by XXXXX</p><br>
-				<p>Minimum wage: XXXXX</p>
-				<a class="button-more" href="./detail-pages/detail1.html">More Details</a>
-			</div>
-			<div class="result-items" id="result3">
-				<figure><img src="https://img.freepik.com/free-icon/important-person_318-10744.jpg?w=2000" width="300"
-						height="200"></figure><br>
-				<p>XXXXXXXXXX</p><br>
-				<p>by XXXXX</p><br>
-				<p>Minimum wage: XXXXX</p>
-				<a class="button-more" href="./detail-pages/detail2.html">More Details</a>
-			</div>
-			<div class="result-items" id="result4">
-				<figure><img src="https://img.freepik.com/free-icon/important-person_318-10744.jpg?w=2000" width="300"
-						height="200"></figure><br>
-				<p>XXXXXXXXXX</p><br>
-				<p>by XXXXX</p><br>
-				<p>Minimum wage: XXXXX</p>
-				<a class="button-more" href="./detail-pages/detail1.html">More Details</a>
-			</div>
-			<div class="result-items" id="result5">
-				<figure><img src="https://img.freepik.com/free-icon/important-person_318-10744.jpg?w=2000" width="300"
-						height="200"></figure><br>
-				<p>XXXXXXXXXX</p><br>
-				<p>by XXXXX</p><br>
-				<p>Minimum wage: XXXXX</p>
-				<a class="button-more" href="./detail-pages/detail1.html">More Details</a>
-			</div>
+				<b class="commission-name">Plantman Pixelart</b><br>
+				<p>by Jorden E. Peterson</p><br>
+				<p>Rate per Hour: $299</p>
+			</a>
 		</div>
 	</section>
-	<footer>
+	<footer> <!--Footer section for technical information which is also in the same format as other pages-->
 		<p>Copyright 2023 TPTPT Co. Ltd. All Rights Reserved</p>
 	</footer>
 </body>
-<style>
-
-</style>
+<script src="../js/toggle-search-result.js"></script>
 
 </html>

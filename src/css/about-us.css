@@ -1,110 +1,120 @@
-/* Normal mode */
+/* change selection color to match with website's color palete  */
 ::selection {
     background-color: white;
-    /* black color */
     color: black;
-    /* white color */
 }
 
+/* style the main body of the about us page */
 main {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: black;
     color: white;
 }
 
+/* contain each individual team member name and description*/
 article {
     display: flex;
     /* set display property to flex for easy alignment */
     align-items: center;
-    /* center vertically */
+    /* center horizontal */
     flex-direction: row-reverse;
 }
 
+/* flip the flex direction in the reverse direction for the odd article */
 article:nth-child(odd) {
     flex-direction: row;
 }
 
-
+/* style the image in ourteam section */
 #ourteam img {
     width: 40vw;
     height: auto;
     padding: 2vw;
 }
 
-.description {
+/* padding the personal introduction of each team member in ourteam section */
+.personIntro {
     width: auto;
     height: auto;
-    padding: 2vw;
+    padding: 5vw;
 }
 
-h3,
-h6,
-hr {
-    position: relative;
-}
-
-
+/* set the font size of name of the team members */
 h3 {
-    font-size: 3vw;
+    font-size: 200%;
 }
 
-h6 {
+/* setting for the job postion of the team */
+.position {
     margin-top: 0.3vw;
     font-size: medium;
 }
 
+/* style the horizontal line */
 hr {
-
     border-color: white;
     border-width: 0.7px;
 }
 
-.personIntro {
+/* style the description of each team member in ourteam section */
+.description {
     margin-top: 2vw;
     font-size: medium;
 }
 
+/* style about us section, it arrange it column style through flex*/
 #about {
     display: flex;
     align-items: center;
     flex-direction: column-reverse;
 }
 
+/* style the paragraph in the about us section  */
 #about p {
     padding: 8vw;
     font-size: x-large;
 }
 
+/* style the paragraph in the company's vision section  */
 #vision p {
     padding: 5vw;
+    padding-right: 8vw;
+    padding-left: 8vw;
     font-size: x-large;
 }
 
+/* class for applying extra large font size */
 .xx_large {
     font-size: 5vw;
 }
 
+/* class for applying 1.5 line height */
 .line-height_1_5 {
     line-height: 1.5;
 }
 
+/* class for applying 2.0 line height */
 .line-height_2_0 {
     line-height: 2;
 }
 
+/* style for the container for vision section*/
 .container {
     display: flex;
     /* set display property to flex for easy alignment */
     flex-direction: column;
     margin: auto;
+    /* set position for relative for topic for be in front*/
     position: relative;
 }
 
+/* for styling the vision section topic word "Our vision" */
 .topic {
-
     font-size: 10vw;
     color: rgb(0, 0, 0);
-    text-shadow: 4px 4px rgb(255, 255, 255);
+    /* text shadow to improve readibilty for the text */
+    text-shadow: 0.5vw 0.5vw rgb(255, 255, 255);
+    /* make the topic text in front of the background image */
     z-index: 1;
     position: absolute;
     top: 16vw;
@@ -113,20 +123,68 @@ hr {
     /* Position the text at the left of the container */
 }
 
+/* set the size for background image in vision section */
 .backgroundImg {
     display: block;
-    width: 100%;
+    width: 100vw;
     height: 40vw;
-
 }
 
-
+/* class for applying the larger font size text */
 .larger-text {
     font-size: larger;
 }
 
+/* applying padding for "our team" topic word and its horizontal line */
 .team_container {
     padding: 3vw;
     padding-top: 6vw;
     padding-right: 0;
+}
+
+/* style for mobile layout */
+/* adjust font size and spacing to suitable for mobile layout */
+@media screen and (max-width: 600px) {
+
+    /* change article to col-based */
+    article {
+        flex-direction: column;
+    }
+
+    /* change odd article to col-based */
+    article:nth-child(odd) {
+        flex-direction: column;
+    }
+
+
+    #ourteam img {
+        width: 100vw;
+        height: auto;
+        padding: 0px;
+    }
+
+
+    .description {
+        margin-top: 5vw;
+        font-size: medium;
+    }
+
+    #vision p {
+        padding: 10vw;
+        font-size: 18px;
+    }
+
+    .personIntro {
+        padding: 5vw;
+        padding-top: 0%;
+    }
+
+    #about p {
+        padding: 7vw;
+        font-size: 18px;
+    }
+
+    .xx_large {
+        font-size: 8vw;
+    }
 }
