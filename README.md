@@ -52,19 +52,21 @@ This project was inspired from sites such as [Fiverr](https://www.fiverr.com/) a
       2. `global.css`
       3. `header-footer.css`
       4. `commission-service-management-admin.css`
-   2. 
+   2. This serves as a management page for admin to add/remove/modify commission data. For removal/modification, admin need to search whether the Commission ID (a composite key of User ID and commission number) exists, if it exists then admin can proceed to confirm/modify. The search functionality hasn't been implemented yet, so the search simply returns a dummy query result and show UI for removal/modification.
 6. User Account Management (`user-account-management-admin.html`)
    1. The followwing CSS are applied:
       1. `navbars.css`
       2. `global.css`
       3. `header-footer.css`
       4. `user-service-management-admin.css`
+   2. This serves as a management page for admin to add/remove/modify user data. For removal/modification, admin need to search whether the user ID exists, if it exists then admin can proceed to confirm/modify. The search functionality hasn't been implemented yet, so the search simply returns a dummy query result and show UI for removal/modification.
 7. About Us (`about-us.html`)
    1. The followwing CSS are applied:
       1. `navbars.css`
       2. `global.css`
       3. `header-footer.css`
       4. `about-us.css`
+   2. This page lists dummy details for our members. Obviously, the titles are for decorative purposes.
 
 ### Cautions
 - Most of the pages have been implemented so that they can be viewed on mobile. However, this is not guaranteed to apply for all pages. We have tested on the default Laptop screen, iPhone XR and iPhone 5/SE screen.

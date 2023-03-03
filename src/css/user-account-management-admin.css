@@ -1,13 +1,16 @@
+/*  uses different header/footer images */
 header, footer {
     background-image: url("https://images.unsplash.com/photo-1590990986455-f1005948c18c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
 }
 
+/* for setting labels text sizes as well */
 p {
     text-align: center;
     color: rgb(160, 160, 160);
     font-size: small;
 }
 
+/* for the initial forms (before the search toggles) */
 .admin-forms {
     background-color: black;
     padding: 30px;
@@ -19,11 +22,14 @@ p {
     justify-content: space-around;
 }
 
+/* for showing add/remove/modify titles */
 .admin-forms h2 {
     padding: 10px;
     text-align: center;
 }
 
+/* for adjusting the query result to be at the centre */
+/* had to account for mobile screen */
 #admin-add,
 #admin-remove,
 #admin-modify {
@@ -38,12 +44,14 @@ p {
     align-items: center;
 }
 
-/* hidden by default */
+/* hiding the remove/modify subpage by default */
+/* shows add subpage by default */
 #admin-remove,
 #admin-modify {
     display: none;
 }
 
+/* hides search query results */
 #remove-details,
 #modify-details {
     margin: 10px;
@@ -53,12 +61,14 @@ p {
     align-items: center;
 }
 
+/* adjusting starter remove/modify forms */
 .search-form {
     display: flex;
     justify-content: center;
     gap: 5px;
 }
 
+/* add button, simple decoration */
 button.button-add {
     width: 60px;
     height: 35px;
@@ -68,6 +78,7 @@ button.button-add {
     border-radius: 7px;
 }
 
+/* search button, simple decoration */
 button.button-search {
     width: 70px;
     height: 35px;
@@ -77,6 +88,7 @@ button.button-search {
     border-radius: 10px;
 }
 
+/* confirm button, decoration */
 button.button-confirm {
     width: 140px;
     height: 35px;
@@ -86,6 +98,7 @@ button.button-confirm {
     border-radius: 10px;
 }
 
+/* adjust every input boxes. assumed that they're all type=text */
 input {
     height: 35px;
     border: 0;
@@ -96,6 +109,7 @@ input {
     padding-left: 10px;
 }
 
+/* starter add form */
 #admin-add form {
     display: flex;
     flex-direction: column;
@@ -103,6 +117,7 @@ input {
     gap: 15px;
 }
 
+/* starter modify form */
 .modify-form {
     display: flex;
     align-items: center;
@@ -110,6 +125,9 @@ input {
     gap: 10px;
 }
 
+/* ---------------------------------------------------------- */
+
+/* adjusting the query result table */
 
 .search-result-table {
     display: flex;
@@ -142,7 +160,11 @@ div.table-row {
     }
 }
 
-/* --------------------------------- */
+/* ---------------------------------------------------------- */
+
+/* ---------------------------------------------------------- */
+
+/* adjusting the top add/remove/modify menu */
 
 .admin-menu {
     background-color: black;
@@ -162,3 +184,5 @@ div.table-row {
 
     flex-grow: 1;
 }
+
+/* ---------------------------------------------------------- */

@@ -29,8 +29,10 @@ section {
 }
 
 section.review {
+    /* cool mini-scrolling effect */
     max-height: 500px;
     overflow-y: scroll;
+    /* -------------------------- */
 
     display: flex;
     flex-direction: row;
@@ -72,7 +74,7 @@ section.review p {
     }
 }
 
-/*  */
+/* general text decoration, just to fit the theme */
 main p {
     background-color: rgb(32, 32, 32);
     padding: 5%;
