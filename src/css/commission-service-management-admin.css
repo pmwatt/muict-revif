@@ -55,6 +55,7 @@ p {
 
 .search-form {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     gap: 5px;
 }
@@ -124,7 +125,8 @@ input {
     border-radius: 10px;
 }
 
-div.table-row {
+div.table-row,
+div.table-header {
     white-space: nowrap;
     overflow-x: auto;
     max-width: 400px;
