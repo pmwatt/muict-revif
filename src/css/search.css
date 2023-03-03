@@ -88,3 +88,9 @@
 	justify-content: center;
 	align-items: center;
 }
+
+.button-more button {
+	background-color: rgb(32, 174, 124);
+	/* color: white; */
+	text-align: center;
+}
