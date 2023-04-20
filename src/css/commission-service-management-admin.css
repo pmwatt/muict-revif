@@ -30,6 +30,7 @@ p {
 
 /* for adjusting the query result to be at the centre */
 /* had to account for mobile screen */
+#admin-search,
 #admin-add,
 #admin-remove,
 #admin-modify {
@@ -46,6 +47,7 @@ p {
 
 /* hiding the remove/modify subpage by default */
 /* shows add subpage by default */
+#admin-add,
 #admin-remove,
 #admin-modify {
     display: none;

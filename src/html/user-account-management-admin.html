@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="UTF-8">
-	<meta http-equiv="aaaaaaaaaaaaaaaaaaaaaaa-UA-Compatible" content="IE=edge">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="../css/global/global.css">
 	<link rel="stylesheet" href="../css/global/navbars.css">
@@ -27,13 +27,24 @@
 	</header>
 	<main>
 		<div class="admin-menu">
-			<button onclick="openMenu('admin-add')" class="admin-menu-button" type="button">ADD</button>
+			<button onclick="openMenu('admin-search')" class="admin-menu-button" type="button">SEARCH</button>
+			<button onclick="openMenu('admin-add')" class="admin-menu-button" type="button">INSERT</button>
 			<button onclick="openMenu('admin-remove')" class="admin-menu-button" type="button">REMOVE</button>
 			<button onclick="openMenu('admin-modify')" class="admin-menu-button" type="button">MODIFY</button>
 		</div>
 		<div class="admin-forms">
+			<div class="menu", id="admin-search">
+				<h2>Search Admin</h2>
+				<form action="" class="search-form">
+					<input type="text" placeholder="User ID">
+					<button type="button" class="button-search" onclick="showRemoveTable()">Search</button>
+				</form>
+				<div id="search-details">
+					<div></div>
+				</div>
+			</div>
 			<div class="menu" id="admin-add">
-				<h2>Add New User</h2>
+				<h2>Add New Admin</h2>
 				<form action="">
 					<input type="text" placeholder="User ID">
 					<input type="text" placeholder="Username">
@@ -49,7 +60,7 @@
 				</form>
 			</div>
 			<div class="menu" id="admin-remove">
-				<h2>Remove User</h2>
+				<h2>Remove Admin</h2>
 				<form action="" class="search-form">
 					<input type="text" placeholder="User ID">
 					<button type="button" class="button-search" onclick="showRemoveTable()">Search</button>
