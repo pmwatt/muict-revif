@@ -8,7 +8,7 @@ function showResult() {
         return;
     }
 
-    // found
+    // found, ooga booga just unhide the results div
     const searchResult = document.getElementById("result");
     searchResult.setAttribute("style", "display: flex");
 }
