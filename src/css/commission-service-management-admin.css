@@ -190,3 +190,13 @@ div.table-header {
 }
 
 /* ---------------------------------------------------------- */
+
+/* adjusting commission search form display */
+
+.admin-search-criteria {
+    color: rgb(118, 118, 118);
+    font-size: small;
+    display: flex;
+    align-items: center;
+    gap: 5%;
+}

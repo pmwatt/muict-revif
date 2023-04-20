@@ -36,8 +36,15 @@
 			<div class="menu" id="admin-search">
 				<h2>Search Commission</h2>
 				<form action="" class="search-form">
-					<input type="text" placeholder="User ID">
-					<input type="text" placeholder="Commission No.">
+					<input type="text" placeholder="Search Here">
+					<div class="admin-search-criteria">
+						<input type="checkbox" name="commission-name" id="">
+						<label for="commission-name">Commission Name</label>
+						<input type="checkbox" name="artist-name" id="">
+						<label for="artist-name">Artist Name</label>
+						<input type="checkbox" name="price" id="">
+						<label for="price">Price</label>
+					</div>
 					<button type="button" class="button-search" onclick="showRemoveTable()">Search</button>
 				</form>
 			</div>
@@ -59,25 +66,28 @@
 			<div class="menu" id="admin-remove">
 				<h2>Remove Commission</h2>
 				<form action="" class="search-form">
-					<input type="text" placeholder="User ID">
-					<input type="text" placeholder="Commission No.">
+					<input type="text" placeholder="Search Here">
+					<div class="admin-search-criteria">
+						<input type="checkbox" name="commission-name" id="">
+						<label for="commission-name">Commission Name</label>
+						<input type="checkbox" name="artist-name" id="">
+						<label for="artist-name">Artist Name</label>
+						<input type="checkbox" name="price" id="">
+						<label for="price">Price</label>
+					</div>
 					<button type="button" class="button-search" onclick="showRemoveTable()">Search</button>
 				</form>
 				<div id="remove-details">
 					<div id="remove-table" class="search-result-table">
 						<div class="table-header">
-							<div>User ID</div>
-							<div>Commission Number</div>
+							<div>Commission ID</div>
 							<div>Commission Name</div>
 							<div>Issue Date</div>
 							<div>Due Date</div>
 							<div>Price</div>
-							<div>Tag</div>
+							<div>Image URL</div>
 						</div>
 						<div class="table-row">
-							<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores expedita laborum velit
-								tempora autem numquam tenetur neque quo voluptas vel at, perferendis placeat
-								exercitationem consequatur asperiores ex eos ullam veniam?</div>
 							<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores expedita laborum velit
 								tempora autem numquam tenetur neque quo voluptas vel at, perferendis placeat
 								exercitationem consequatur asperiores ex eos ullam veniam?</div>
@@ -104,25 +114,28 @@
 			<div class="menu" id="admin-modify">
 				<h2>Modify Commission</h2>
 				<form action="" class="search-form">
-					<input type="text" placeholder="User ID">
-					<input type="text" placeholder="Commission No.">
+					<input type="text" placeholder="Search Here">
+					<div class="admin-search-criteria">
+						<input type="checkbox" name="commission-name" id="">
+						<label for="commission-name">Commission Name</label>
+						<input type="checkbox" name="artist-name" id="">
+						<label for="artist-name">Artist Name</label>
+						<input type="checkbox" name="price" id="">
+						<label for="price">Price</label>
+					</div>
 					<button type="button" onclick="showModifyTable()" class="button-search">Search</button>
 				</form>
 				<div id="modify-details">
 					<div id="modify-table" class="search-result-table">
 						<div class="table-header">
-							<div>User ID</div>
-							<div>Commission Number</div>
+							<div>Commission ID</div>
 							<div>Commission Name</div>
 							<div>Issue Date</div>
 							<div>Due Date</div>
 							<div>Price</div>
-							<div>Tag</div>
+							<div>Image URL</div>
 						</div>
 						<div class="table-row">
-							<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores expedita laborum velit
-								tempora autem numquam tenetur neque quo voluptas vel at, perferendis placeat
-								exercitationem consequatur asperiores ex eos ullam veniam?</div>
 							<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores expedita laborum velit
 								tempora autem numquam tenetur neque quo voluptas vel at, perferendis placeat
 								exercitationem consequatur asperiores ex eos ullam veniam?</div>
@@ -145,15 +158,14 @@
 					</div>
 					<form action="" class="modify-form">
 						<p>Enter new details.<br>Leave blank if unchanged.</p>
-						<input type="text" placeholder="New User ID">
-						<input type="text" placeholder="New Commission No.">
+						<input type="text" placeholder="New Commission ID">
 						<input type="text" placeholder="New Commission Name">
 						<p>New Issue Date</p>
 						<input type="date" placeholder="New Issue Date">
 						<p>New Due Date</p>
 						<input type="date" placeholder="New Due Date">
 						<input type="number" placeholder="New Price">
-						<input type="Tag" placeholder="New Tag">
+						<input type="Tag" placeholder="New Image URL">
 						<button type="button" class="button-confirm">Confirm Changes</button>
 					</form>
 				</div>
