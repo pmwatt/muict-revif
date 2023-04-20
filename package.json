@@ -1,0 +1,19 @@
+{
+  "name": "muict-revif",
+  "version": "1.0.0",
+  "description": "This project is a part of **ITCS212 Introduction to Web Programming** course at MUICT.\r See the project repository on [GitHub](https://github.com/pmwatt/muict-webprog.git) and live preview on [GitHub Pages](https://pmwatt.github.io/muict-revif/).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pmwatt/muict-revif.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pmwatt/muict-revif/issues"
+  },
+  "homepage": "https://github.com/pmwatt/muict-revif#readme"
+}
