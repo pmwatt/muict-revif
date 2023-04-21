@@ -20,10 +20,10 @@ router.use(express.json());
 router.use(express.urlencoded({ extended: true }));
 
 // set static file directory
-app.use('/', express.static(path.join(__dirname, '/src/css')))
-app.use('/aboutus', express.static(path.join(__dirname, '/src/css')))
-app.use('/search', express.static(path.join(__dirname, '/src/css')))
-app.use('/login', express.static(path.join(__dirname, '/src/css')))
+app.use(path.join(__dirname, '/'), express.static(path.join(__dirname, '/src/css')))
+// app.use('/aboutus', express.static(path.join(__dirname, '/src/css')))
+// app.use('/search', express.static(path.join(__dirname, '/src/css')))
+// app.use('/login', express.static(path.join(__dirname, '/src/css')))
 
 // connect to env
 const connection = mysql.createConnection({
