@@ -8,33 +8,33 @@
 	<link rel="stylesheet" href="../css/global/global.css">
 	<link rel="stylesheet" href="../css/global/navbars.css">
 	<link rel="stylesheet" href="../css/global/header-footer.css">
-	<link rel="stylesheet" href="../css/user-account-management-admin.css">
-	<title>User Management</title>
+	<link rel="stylesheet" href="../css/commission-service-management-admin.css">
+	<title>Commission Management</title>
 </head>
 
 <body>
 	<nav class="admin-navbar">
 		<ul>
-			<li><a href="../../index.html">Back</a></li>
+			<li><a href="/">Back</a></li>
 		</ul>
 		<ul>
-			<li><a href="#">User Management</a></li>
-			<li><a href="./commission-service-management-admin.html">Commission Management</a></li>
+			<li><a href="/admin-management">User Management</a></li>
+			<li><a href="#">Commission Management</a></li>
 		</ul>
 	</nav>
 	<header>
-		<h1>User Account Management</h1>
+		<h1>Commission Service Management</h1>
 	</header>
 	<main>
 		<div class="admin-menu">
 			<button onclick="openMenu('admin-search')" class="admin-menu-button" type="button">SEARCH</button>
-			<button onclick="openMenu('admin-add')" class="admin-menu-button" type="button">INSERT</button>
+			<button onclick="openMenu('admin-add')" class="admin-menu-button" type="button">ADD</button>
 			<button onclick="openMenu('admin-remove')" class="admin-menu-button" type="button">REMOVE</button>
 			<button onclick="openMenu('admin-modify')" class="admin-menu-button" type="button">MODIFY</button>
 		</div>
 		<div class="admin-forms">
-			<div class="menu", id="admin-search">
-				<h2>Search Admin</h2>
+			<div class="menu" id="admin-search">
+				<h2>Search Commission</h2>
 				<form action="" class="search-form">
 					<input type="text" placeholder="Search Here">
 					<div class="admin-search-criteria">
@@ -47,29 +47,24 @@
 					</div>
 					<button type="button" class="button-search" onclick="showRemoveTable()">Search</button>
 				</form>
-				<div id="search-details">
-					<!-- to manipulate DOM here -->
-				</div>
 			</div>
 			<div class="menu" id="admin-add">
-				<h2>Add New Admin</h2>
+				<h2>Add New Commission</h2>
 				<form action="">
-					<input type="text" placeholder="Username">
-					<input type="text" placeholder="First Name">
-					<input type="text" placeholder="Last Name">
-					<p>Date of Birth</p>
-					<input type="date" placeholder="DOB">
-					<input type="text" placeholder="Phone No.">
-					<input type="text" placeholder="Email">
-					<input type="text" placeholder="Password">
-					<input type="text" placeholder="Role">
-					<p>Last Login Date</p>
-					<input type="date" placeholder="Last Login Date">
+					<input type="text" placeholder="User ID">
+					<input type="text" placeholder="Commission No.">
+					<input type="text" placeholder="Commission Name">
+					<p>Issue Date</p>
+					<input type="date" placeholder="Issue Date">
+					<p>Due Date (Optional)</p>
+					<input type="date" placeholder="Due Date">
+					<input type="number" placeholder="Price">
+					<input type="Tag" placeholder="Tag">
 					<button type="button" class="button-confirm">Confirm Add</button>
 				</form>
 			</div>
 			<div class="menu" id="admin-remove">
-				<h2>Remove Admin</h2>
+				<h2>Remove Commission</h2>
 				<form action="" class="search-form">
 					<input type="text" placeholder="Search Here">
 					<div class="admin-search-criteria">
@@ -85,26 +80,14 @@
 				<div id="remove-details">
 					<div id="remove-table" class="search-result-table">
 						<div class="table-header">
-							<div>Username</div>
-							<div>First Name</div>
-							<div>Last Name</div>
-							<div>DOB</div>
-							<div>Phone</div>
-							<div>Email</div>
-							<div>Password</div>
-							<div>Role</div>
-							<div>Last Login Date</div>
+							<div>Commission ID</div>
+							<div>Commission Name</div>
+							<div>Issue Date</div>
+							<div>Due Date</div>
+							<div>Price</div>
+							<div>Image URL</div>
 						</div>
 						<div class="table-row">
-							<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores expedita laborum velit
-								tempora autem numquam tenetur neque quo voluptas vel at, perferendis placeat
-								exercitationem consequatur asperiores ex eos ullam veniam?</div>
-							<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores expedita laborum velit
-								tempora autem numquam tenetur neque quo voluptas vel at, perferendis placeat
-								exercitationem consequatur asperiores ex eos ullam veniam?</div>
-							<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores expedita laborum velit
-								tempora autem numquam tenetur neque quo voluptas vel at, perferendis placeat
-								exercitationem consequatur asperiores ex eos ullam veniam?</div>
 							<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores expedita laborum velit
 								tempora autem numquam tenetur neque quo voluptas vel at, perferendis placeat
 								exercitationem consequatur asperiores ex eos ullam veniam?</div>
@@ -129,7 +112,7 @@
 				</div>
 			</div>
 			<div class="menu" id="admin-modify">
-				<h2>Modify User</h2>
+				<h2>Modify Commission</h2>
 				<form action="" class="search-form">
 					<input type="text" placeholder="Search Here">
 					<div class="admin-search-criteria">
@@ -145,26 +128,14 @@
 				<div id="modify-details">
 					<div id="modify-table" class="search-result-table">
 						<div class="table-header">
-							<div>Username</div>
-							<div>First Name</div>
-							<div>Last Name</div>
-							<div>DOB</div>
-							<div>Phone</div>
-							<div>Email</div>
-							<div>Password</div>
-							<div>Role</div>
-							<div>Last Login Date</div>
+							<div>Commission ID</div>
+							<div>Commission Name</div>
+							<div>Issue Date</div>
+							<div>Due Date</div>
+							<div>Price</div>
+							<div>Image URL</div>
 						</div>
 						<div class="table-row">
-							<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores expedita laborum velit
-								tempora autem numquam tenetur neque quo voluptas vel at, perferendis placeat
-								exercitationem consequatur asperiores ex eos ullam veniam?</div>
-							<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores expedita laborum velit
-								tempora autem numquam tenetur neque quo voluptas vel at, perferendis placeat
-								exercitationem consequatur asperiores ex eos ullam veniam?</div>
-							<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores expedita laborum velit
-								tempora autem numquam tenetur neque quo voluptas vel at, perferendis placeat
-								exercitationem consequatur asperiores ex eos ullam veniam?</div>
 							<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores expedita laborum velit
 								tempora autem numquam tenetur neque quo voluptas vel at, perferendis placeat
 								exercitationem consequatur asperiores ex eos ullam veniam?</div>
@@ -186,25 +157,21 @@
 						</div>
 					</div>
 					<form action="" class="modify-form">
-						<p class="form-txt">Enter new details.<br>Leave blank if unchanged.</p>
-						<input type="text" placeholder="Username">
-						<input type="text" placeholder="First Name">
-						<input type="text" placeholder="Last Name">
-						<p class="form-txt">Date Of Birth</p>
-						<input type="date" placeholder="DOB">
-						<input type="text" placeholder="Phone No.">
-						<input type="text" placeholder="Email">
-						<input type="text" placeholder="Password">
-						<input type="text" placeholder="Role">
-						<p class="form-txt">Last login date</p>
-						<input type="date" placeholder="Last Login Date">
+						<p>Enter new details.<br>Leave blank if unchanged.</p>
+						<input type="text" placeholder="New Commission ID">
+						<input type="text" placeholder="New Commission Name">
+						<p>New Issue Date</p>
+						<input type="date" placeholder="New Issue Date">
+						<p>New Due Date</p>
+						<input type="date" placeholder="New Due Date">
+						<input type="number" placeholder="New Price">
+						<input type="Tag" placeholder="New Image URL">
 						<button type="button" class="button-confirm">Confirm Changes</button>
 					</form>
 				</div>
 			</div>
 		</div>
 	</main>
-
 	<footer>
 		<p>Copyright 2023 TPTPT Co. Ltd. All Rights Reserved</p>
 	</footer>

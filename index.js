@@ -8,21 +8,22 @@ dotenv.config();
 const app = express();
 
 // register routers
-const routerUser = express.Router();
-const routerAdmin = express.Router();
-app.use('/', routerUser);
-app.use('/admin', routerAdmin);
+const router = express.Router();
+app.use('/', router);
 
 // express req body for admin
-routerAdmin.use(express.json());
-routerAdmin.use(express.urlencoded({ extended: true }));
+router.use(express.json());
+router.use(express.urlencoded({ extended: true }));
 
 // express req body for user
-routerUser.use(express.json());
-routerUser.use(express.urlencoded({ extended: true }));
+router.use(express.json());
+router.use(express.urlencoded({ extended: true }));
 
 // set static file directory
 app.use('/', express.static(path.join(__dirname, '/src/css')))
+app.use('/aboutus', express.static(path.join(__dirname, '/src/css')))
+app.use('/search', express.static(path.join(__dirname, '/src/css')))
+app.use('/login', express.static(path.join(__dirname, '/src/css')))
 
 // connect to env
 const connection = mysql.createConnection({
@@ -40,10 +41,40 @@ connection.connect(function (err) { // callback
 
 /////////////////////////////////////
 
-routerUser.get('/', (req, res) => {
+router.get('/', (req, res) => {
     res.statusCode = 200;
-    // console.log('hewwo');
     res.sendFile(path.join(__dirname, "/index.html"));
+});
+
+router.get('/aboutus', (req, res) => {
+    res.statusCode = 200;
+    res.sendFile(path.join(__dirname, "/src/html/about-us.html"));
+});
+
+router.get('/search', (req, res) => {
+    res.statusCode = 200;
+    res.sendFile(path.join(__dirname, "/src/html/search.html"));
+});
+
+router.get('/login', (req, res) => {
+    res.statusCode = 200;
+    res.sendFile(path.join(__dirname, "/src/html/login-admin.html"));
+});
+
+router.get('/admin-management', (req,res) => {
+    res.statusCode = 200;
+    res.sendFile(path.join(__dirname, "/src/html/admin-management.html"));
+});
+
+router.get('/commission-management', (req,res) => {
+    res.statusCode = 200;
+    res.sendFile(path.join(__dirname, "/src/html/commission-management.html"));
+});
+
+// not found
+router.get('*', (req, res) => {
+    res.statusCode = 404;
+    res.sendFile(path.join(__dirname, "/src/html/error.html"));
 });
 
 /////////////////////////////////////
