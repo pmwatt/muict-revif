@@ -53,19 +53,19 @@
 			</div>
 			<div class="menu" id="admin-add">
 				<h2>Add New Admin</h2>
-				<form action="">
-					<input type="text" placeholder="Username">
-					<input type="text" placeholder="First Name">
-					<input type="text" placeholder="Last Name">
+				<form action="admin-insert-submit" method="post">
+					<input name="username" type="text" placeholder="Username">
+					<input name="fn" type="text" placeholder="First Name">
+					<input name="ln" type="text" placeholder="Last Name">
 					<p>Date of Birth</p>
-					<input type="date" placeholder="DOB">
-					<input type="text" placeholder="Phone No.">
-					<input type="text" placeholder="Email">
-					<input type="text" placeholder="Password">
-					<input type="text" placeholder="Role">
+					<input name="dob" type="date" placeholder="DOB">
+					<input name="phone" type="text" placeholder="Phone No.">
+					<input name="email" type="text" placeholder="Email">
+					<input name="pwd" type="text" placeholder="Password">
+					<input name="role" type="text" placeholder="Role">
 					<p>Last Login Date</p>
-					<input type="date" placeholder="Last Login Date">
-					<button type="button" class="button-confirm">Confirm Add</button>
+					<input name="lastlogin" type="date" placeholder="Last Login Date">
+					<button type="submit" class="button-confirm">Confirm Add</button>
 				</form>
 			</div>
 			<div class="menu" id="admin-remove">
