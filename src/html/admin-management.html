@@ -18,12 +18,12 @@
 			<li><a href="/">Back</a></li>
 		</ul>
 		<ul>
-			<li><a href="#">User Management</a></li>
+			<li><a href="#">Admin Management</a></li>
 			<li><a href="/commission-management">Commission Management</a></li>
 		</ul>
 	</nav>
 	<header>
-		<h1>User Account Management</h1>
+		<h1>Admin Account Management</h1>
 	</header>
 	<main>
 		<div class="admin-menu">
@@ -70,137 +70,29 @@
 			</div>
 			<div class="menu" id="admin-remove">
 				<h2>Remove Admin</h2>
-				<form action="" class="search-form">
-					<input type="text" placeholder="Search Here">
-					<div class="admin-search-criteria">
-						<input type="checkbox" name="commission-name" id="">
-						<label for="commission-name">Commission Name</label>
-						<input type="checkbox" name="artist-name" id="">
-						<label for="artist-name">Artist Name</label>
-						<input type="checkbox" name="price" id="">
-						<label for="price">Price</label>
-					</div>
-					<button type="button" class="button-search" onclick="showRemoveTable()">Search</button>
+				<!-- using POST for DELETE -->
+				<form action="admin-remove-submit" method="post" class="search-form">
+					<input name="username" type="text" placeholder="Username">
+					<button type="submit" class="button-confirm">Confirm Remove</button>
 				</form>
-				<!-- <div id="remove-details">
-					<div id="remove-table" class="search-result-table">
-						<div class="table-header">
-							<div>Username</div>
-							<div>First Name</div>
-							<div>Last Name</div>
-							<div>DOB</div>
-							<div>Phone</div>
-							<div>Email</div>
-							<div>Password</div>
-							<div>Role</div>
-							<div>Last Login Date</div>
-						</div>
-						<div class="table-row">
-							<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores expedita laborum velit
-								tempora autem numquam tenetur neque quo voluptas vel at, perferendis placeat
-								exercitationem consequatur asperiores ex eos ullam veniam?</div>
-							<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores expedita laborum velit
-								tempora autem numquam tenetur neque quo voluptas vel at, perferendis placeat
-								exercitationem consequatur asperiores ex eos ullam veniam?</div>
-							<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores expedita laborum velit
-								tempora autem numquam tenetur neque quo voluptas vel at, perferendis placeat
-								exercitationem consequatur asperiores ex eos ullam veniam?</div>
-							<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores expedita laborum velit
-								tempora autem numquam tenetur neque quo voluptas vel at, perferendis placeat
-								exercitationem consequatur asperiores ex eos ullam veniam?</div>
-							<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores expedita laborum velit
-								tempora autem numquam tenetur neque quo voluptas vel at, perferendis placeat
-								exercitationem consequatur asperiores ex eos ullam veniam?</div>
-							<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores expedita laborum velit
-								tempora autem numquam tenetur neque quo voluptas vel at, perferendis placeat
-								exercitationem consequatur asperiores ex eos ullam veniam?</div>
-							<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores expedita laborum velit
-								tempora autem numquam tenetur neque quo voluptas vel at, perferendis placeat
-								exercitationem consequatur asperiores ex eos ullam veniam?</div>
-							<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores expedita laborum velit
-								tempora autem numquam tenetur neque quo voluptas vel at, perferendis placeat
-								exercitationem consequatur asperiores ex eos ullam veniam?</div>
-							<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores expedita laborum velit
-								tempora autem numquam tenetur neque quo voluptas vel at, perferendis placeat
-								exercitationem consequatur asperiores ex eos ullam veniam?</div>
-						</div>
-					</div>
-					<button type="button" class="button-confirm">Confirm Remove</button>
-				</div> -->
 			</div>
 			<div class="menu" id="admin-modify">
-				<h2>Modify User</h2>
-				<form action="" class="search-form">
-					<input type="text" placeholder="Search Here">
-					<div class="admin-search-criteria">
-						<input type="checkbox" name="commission-name" id="">
-						<label for="commission-name">Commission Name</label>
-						<input type="checkbox" name="artist-name" id="">
-						<label for="artist-name">Artist Name</label>
-						<input type="checkbox" name="price" id="">
-						<label for="price">Price</label>
-					</div>
-					<button type="button" onclick="showModifyTable()" class="button-search">Search</button>
+				<h2>Modify Admin</h2>
+				<!-- using POST for PUT-->
+				<form action="/admin-update-submit" method="post" class="search-form">
+					<input name="username" type="text" placeholder="Username">
+					<input name="fn" type="text" placeholder="First Name">
+					<input name="ln" type="text" placeholder="Last Name">
+					<p>Date of Birth</p>
+					<input name="dob" type="date" placeholder="DOB">
+					<input name="phone" type="text" placeholder="Phone No.">
+					<input name="email" type="text" placeholder="Email">
+					<input name="pwd" type="text" placeholder="Password">
+					<input name="role" type="text" placeholder="Role">
+					<p>Last Login Date</p>
+					<input name="lastlogin" type="date" placeholder="Last Login Date">
+					<button type="submit" class="button-confirm">Confirm Changes</button>
 				</form>
-				<div id="modify-details">
-					<div id="modify-table" class="search-result-table">
-						<div class="table-header">
-							<div>Username</div>
-							<div>First Name</div>
-							<div>Last Name</div>
-							<div>DOB</div>
-							<div>Phone</div>
-							<div>Email</div>
-							<div>Password</div>
-							<div>Role</div>
-							<div>Last Login Date</div>
-						</div>
-						<div class="table-row">
-							<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores expedita laborum velit
-								tempora autem numquam tenetur neque quo voluptas vel at, perferendis placeat
-								exercitationem consequatur asperiores ex eos ullam veniam?</div>
-							<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores expedita laborum velit
-								tempora autem numquam tenetur neque quo voluptas vel at, perferendis placeat
-								exercitationem consequatur asperiores ex eos ullam veniam?</div>
-							<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores expedita laborum velit
-								tempora autem numquam tenetur neque quo voluptas vel at, perferendis placeat
-								exercitationem consequatur asperiores ex eos ullam veniam?</div>
-							<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores expedita laborum velit
-								tempora autem numquam tenetur neque quo voluptas vel at, perferendis placeat
-								exercitationem consequatur asperiores ex eos ullam veniam?</div>
-							<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores expedita laborum velit
-								tempora autem numquam tenetur neque quo voluptas vel at, perferendis placeat
-								exercitationem consequatur asperiores ex eos ullam veniam?</div>
-							<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores expedita laborum velit
-								tempora autem numquam tenetur neque quo voluptas vel at, perferendis placeat
-								exercitationem consequatur asperiores ex eos ullam veniam?</div>
-							<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores expedita laborum velit
-								tempora autem numquam tenetur neque quo voluptas vel at, perferendis placeat
-								exercitationem consequatur asperiores ex eos ullam veniam?</div>
-							<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores expedita laborum velit
-								tempora autem numquam tenetur neque quo voluptas vel at, perferendis placeat
-								exercitationem consequatur asperiores ex eos ullam veniam?</div>
-							<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores expedita laborum velit
-								tempora autem numquam tenetur neque quo voluptas vel at, perferendis placeat
-								exercitationem consequatur asperiores ex eos ullam veniam?</div>
-						</div>
-					</div>
-					<form action="" class="modify-form">
-						<p class="form-txt">Enter new details.<br>Leave blank if unchanged.</p>
-						<input type="text" placeholder="Username">
-						<input type="text" placeholder="First Name">
-						<input type="text" placeholder="Last Name">
-						<p class="form-txt">Date Of Birth</p>
-						<input type="date" placeholder="DOB">
-						<input type="text" placeholder="Phone No.">
-						<input type="text" placeholder="Email">
-						<input type="text" placeholder="Password">
-						<input type="text" placeholder="Role">
-						<p class="form-txt">Last login date</p>
-						<input type="date" placeholder="Last Login Date">
-						<button type="button" class="button-confirm">Confirm Changes</button>
-					</form>
-				</div>
 			</div>
 		</div>
 	</main>

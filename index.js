@@ -78,6 +78,7 @@ router.post('/admin-insert-submit', (req, res) => {
         lastLoginDate: req.body.lastLogin
     }
 
+    // check if exists
     if (!adminInfo || !adminLogin) {
         return res.status(400).send({
             error: true,
@@ -85,45 +86,84 @@ router.post('/admin-insert-submit', (req, res) => {
         })
     }
 
-    // multiple queries: https://stackoverflow.com/questions/29631131/perform-two-or-more-queries-in-one-request-using-node-mysql-and-expressjs#:~:text=To%20use%20multiple%20statement%20queries%2C%20you%20should%20first,statement%20queries%20as%20shown%20below%20in%20your%20connection.query.
-    async.parallel([
-        () => {
-            connection.query("INSERT INTO admin_info SET ?", adminInfo, (error, results) => {
-                if (error) throw error;
-                return res.send({
-                    error: false,
-                    data: results.affectedRows,
-                    message: 'New admin info record been added successfully.'
-                })
-            }),
-            connection.query("INSERT INTO admin_login SET ?", adminLogin, (error, results) => {
-                if (error) throw error;
-                return res.send({
-                    error: false,
-                    data: results.affectedRows,
-                    message: 'New admin login record has been added successfully.'
-                })
-            })
-        }
-    ])
+    // consider checking duplicated username and email
+
+    // must add into 2 tables
+    connection.query("INSERT INTO admin_info SET ?", adminInfo, (error, results) => {
+        if (error) throw error;
+        connection.query("INSERT INTO admin_login SET ?", adminLogin, (error, results) => {
+            if (error) throw error;
+            return res.send({
+                error: false,
+                data: results.affectedRows,
+                message: 'New admin info record been added successfully.'
+            });
+        });
+    });
 });
 
-router.put('/admin-update-submit', (req,res) => {
-    let adminInfo = {
-        username: req.body.username,
-        fname: req.body.fn,
-        lname: req.body.ln,
-        DOB: req.body.dob,
-        phone: req.body.phone,
-        email: req.body.email
-    };
-    let adminLogin = {
-        username: req.body.username,
-        pwd: req.body.pwd,
-        adminRole: req.body.role,
-        lastLoginDate: req.body.lastLogin
+// admin's DELETE form submission
+router.delete('/admin-remove-submit', (req, res) => {
+    let username = req.body.username;
+
+    // check if undefined or not
+    if (!username) {
+        return res.status(400).send({
+            error: true,
+            message: 'Please provide username'
+        });
     }
 
+    // must delete from both tables, starting with foreign one first (admin_login)
+    connection.query("DELETE FROM admin_login WHERE username = ?", username, (error, results) => {
+        if (error) throw error;
+        connection.query("DELETE FROM admin_info WHERE username = ?", username, (error, results) => {
+            if (error) throw error;
+            return res.send({
+                error: false,
+                data: results.affectedRows,
+                message: 'New admin info record been added successfully.'
+            });
+        });
+    });
+});
+
+// admin's UPDATE form submission
+router.put('/admin-update-submit', (req, res) => {
+    let username = req.body.username;
+    let adminInfo = {
+        "fname": req.body.fn,
+        "lname": req.body.ln,
+        "DOB": req.body.dob,
+        "phone": req.body.phone,
+        "email": req.body.email
+    };
+    let adminLogin = {
+        "pwd": req.body.pwd,
+        "adminRole": req.body.role,
+        "lastLoginDate": req.body.lastLogin
+    }
+
+    // check if undefined or not
+    if (!adminInfo || !adminLogin) {
+        return res.status(400).send({
+            error: true,
+            message: 'Please provide admin information'
+        });
+    }
+
+    //
+    connection.query("UPDATE admin_info SET ? WHERE username = ?", [adminInfo, username], (error, results) => {
+        if (error) throw error;
+        connection.query("UPDATE admin_login SET ? WHERE username = ?", [adminLogin, username], (error, results) => {
+            if (error) throw error;
+            return res.send({
+                error: false,
+                data: results.affectedRows,
+                message: 'New admin info record been added successfully.'
+            });
+        });
+    });
 });
 
 router.get('/commission-management', (req, res) => {
