@@ -16,12 +16,6 @@ app.use('/', router);
 router.use(express.json());
 router.use(express.urlencoded({ extended: true }));
 
-// set static file directory
-app.use(path.join(__dirname, '/'), express.static(path.join(__dirname, '/src/css')))
-// app.use('/aboutus', express.static(path.join(__dirname, '/src/css')))
-// app.use('/search', express.static(path.join(__dirname, '/src/css')))
-// app.use('/login', express.static(path.join(__dirname, '/src/css')))
-
 // connect to env
 const connection = mysql.createConnection({
     host: process.env.MYSQL_HOST,
@@ -35,6 +29,10 @@ connection.connect(function (err) { // callback
     if (err) throw err;
     console.log(`Connect DB: ${process.env.MYSQL_DATABASE}`);
 });
+
+// set static file directory
+app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'src/js')));
 
 /////////////////////////////////////
 
@@ -110,19 +108,37 @@ router.post('/admin-insert-submit', (req, res) => {
     ])
 });
 
+router.put('/admin-update-submit', (req,res) => {
+    let adminInfo = {
+        username: req.body.username,
+        fname: req.body.fn,
+        lname: req.body.ln,
+        DOB: req.body.dob,
+        phone: req.body.phone,
+        email: req.body.email
+    };
+    let adminLogin = {
+        username: req.body.username,
+        pwd: req.body.pwd,
+        adminRole: req.body.role,
+        lastLoginDate: req.body.lastLogin
+    }
+
+});
+
 router.get('/commission-management', (req, res) => {
     res.statusCode = 200;
     res.sendFile(path.join(__dirname, "/src/html/commission-management.html"));
 });
 
 // not found
-router.get('*', (req, res) => {
-    res.statusCode = 404;
-    res.sendFile(path.join(__dirname, "/src/html/error.html"));
-});
+// router.get('*', (req, res) => {
+//     res.statusCode = 404;
+//     res.sendFile(path.join(__dirname, "/src/html/error.html"));
+// });
 
 /////////////////////////////////////
 
 app.listen(process.env.PORT, () => {
-    console.log("Listening on port 8081");
+    console.log(`Listening on port ${process.env.PORT}`);
 })
