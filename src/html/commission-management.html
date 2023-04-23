@@ -35,17 +35,22 @@
 		<div class="admin-forms">
 			<div class="menu" id="admin-search">
 				<h2>Search Commission</h2>
-				<form action="" class="search-form">
-					<input type="text" placeholder="Search Here">
+				<form action="commission-search-submit" method="get" class="search-form">
+					<!--<input type="text" placeholder="Search Here">-->
 					<div class="admin-search-criteria">
-						<input type="checkbox" name="commission-name" id="">
-						<label for="commission-name">Commission Name</label>
-						<input type="checkbox" name="artist-name" id="">
-						<label for="artist-name">Artist Name</label>
-						<input type="checkbox" name="price" id="">
-						<label for="price">Price</label>
+						<div class="admin-search-criteria">
+							<!--<input type="checkbox" name="commission-name" id="">-->
+							<label for="commission_name">Commission Name: </label>
+							<input type="text" name="commission_name" placeholder="Search Here">
+							<!--<input type="checkbox" name="artist-name" id="">-->
+							<label for="artist_name">email: </label>
+							<input type="text" name="email" placeholder="Search Here">
+							<!--<input type="checkbox" name="price" id="">-->
+							<label for="price">Price: </label>
+							<input type="text" name="price" placeholder="Search Here">
+						</div>
+						<button type="submit" class="button-search" onclick="showRemoveTable()">Search</button>
 					</div>
-					<button type="button" class="button-search" onclick="showRemoveTable()">Search</button>
 				</form>
 			</div>
 			<div class="menu" id="admin-add">

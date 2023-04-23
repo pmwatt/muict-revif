@@ -4,7 +4,7 @@
   "description": "This project is a part of **ITCS212 Introduction to Web Programming** course at MUICT.\r See the project repository on [GitHub](https://github.com/pmwatt/muict-webprog.git) and live preview on [GitHub Pages](https://pmwatt.github.io/muict-revif/).",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "nodemon ws.js"
   },
   "repository": {
     "type": "git",
@@ -18,6 +18,7 @@
   "homepage": "https://github.com/pmwatt/muict-revif#readme",
   "dependencies": {
     "async": "^3.2.4",
+    "concurrently": "^8.0.1",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "mysql2": "^3.2.3",
