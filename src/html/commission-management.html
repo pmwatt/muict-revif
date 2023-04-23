@@ -50,125 +50,42 @@
 			</div>
 			<div class="menu" id="admin-add">
 				<h2>Add New Commission</h2>
-				<form action="">
-					<input type="text" placeholder="User ID">
-					<input type="text" placeholder="Commission No.">
-					<input type="text" placeholder="Commission Name">
+				<form action="commission-insert-submit" method="post">
+					<input name="commission_id" type="text" placeholder="Commission ID">
+					<input name="commission_name" type="text" placeholder="Commission Name">
 					<p>Issue Date</p>
-					<input type="date" placeholder="Issue Date">
-					<p>Due Date (Optional)</p>
-					<input type="date" placeholder="Due Date">
-					<input type="number" placeholder="Price">
-					<input type="Tag" placeholder="Tag">
-					<button type="button" class="button-confirm">Confirm Add</button>
+					<input name="issue_date" type="date" placeholder="Issue Date">
+					<p>Due Date</p>
+					<input name="due_date" type="date" placeholder="Due Date">
+					<input name="price" type="number" placeholder="Price">
+					<input name="imageURL" type="text" placeholder="Image URL">
+					<input name="commissioner_email" type="text" placeholder="Commissioner Email">
+					<input name="commissioner_phoneNum" type="text" placeholder="Commissioner Phone">
+					<button type="submit" class="button-confirm">Confirm Add</button>
 				</form>
 			</div>
 			<div class="menu" id="admin-remove">
 				<h2>Remove Commission</h2>
-				<form action="" class="search-form">
-					<input type="text" placeholder="Search Here">
-					<div class="admin-search-criteria">
-						<input type="checkbox" name="commission-name" id="">
-						<label for="commission-name">Commission Name</label>
-						<input type="checkbox" name="artist-name" id="">
-						<label for="artist-name">Artist Name</label>
-						<input type="checkbox" name="price" id="">
-						<label for="price">Price</label>
-					</div>
-					<button type="button" class="button-search" onclick="showRemoveTable()">Search</button>
+				<form action="commission-remove-submit" method="delete" class="search-form">
+					<input name="username" type="text" placeholder="Username">
+					<button type="submit" class="button-confirm">Confirm Remove</button>
 				</form>
-				<div id="remove-details">
-					<div id="remove-table" class="search-result-table">
-						<div class="table-header">
-							<div>Commission ID</div>
-							<div>Commission Name</div>
-							<div>Issue Date</div>
-							<div>Due Date</div>
-							<div>Price</div>
-							<div>Image URL</div>
-						</div>
-						<div class="table-row">
-							<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores expedita laborum velit
-								tempora autem numquam tenetur neque quo voluptas vel at, perferendis placeat
-								exercitationem consequatur asperiores ex eos ullam veniam?</div>
-							<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores expedita laborum velit
-								tempora autem numquam tenetur neque quo voluptas vel at, perferendis placeat
-								exercitationem consequatur asperiores ex eos ullam veniam?</div>
-							<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores expedita laborum velit
-								tempora autem numquam tenetur neque quo voluptas vel at, perferendis placeat
-								exercitationem consequatur asperiores ex eos ullam veniam?</div>
-							<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores expedita laborum velit
-								tempora autem numquam tenetur neque quo voluptas vel at, perferendis placeat
-								exercitationem consequatur asperiores ex eos ullam veniam?</div>
-							<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores expedita laborum velit
-								tempora autem numquam tenetur neque quo voluptas vel at, perferendis placeat
-								exercitationem consequatur asperiores ex eos ullam veniam?</div>
-							<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores expedita laborum velit
-								tempora autem numquam tenetur neque quo voluptas vel at, perferendis placeat
-								exercitationem consequatur asperiores ex eos ullam veniam?</div>
-						</div>
-					</div>
-					<button type="button" class="button-confirm">Confirm Remove</button>
-				</div>
 			</div>
 			<div class="menu" id="admin-modify">
 				<h2>Modify Commission</h2>
-				<form action="" class="search-form">
-					<input type="text" placeholder="Search Here">
-					<div class="admin-search-criteria">
-						<input type="checkbox" name="commission-name" id="">
-						<label for="commission-name">Commission Name</label>
-						<input type="checkbox" name="artist-name" id="">
-						<label for="artist-name">Artist Name</label>
-						<input type="checkbox" name="price" id="">
-						<label for="price">Price</label>
-					</div>
-					<button type="button" onclick="showModifyTable()" class="button-search">Search</button>
+				<form action="commission-update-submit" method="put" class="search-form">
+					<input name="commission_id" type="text" placeholder="Commission ID">
+					<input name="commission_name" type="text" placeholder="Commission Name">
+					<p>Issue Date</p>
+					<input name="issue_date" type="date" placeholder="Issue Date">
+					<p>Due Date</p>
+					<input name="due_date" type="date" placeholder="Due Date">
+					<input name="price" type="number" placeholder="Price">
+					<input name="imageURL" type="text" placeholder="Image URL">
+					<input name="commissioner_email" type="text" placeholder="Commissioner Email">
+					<input name="commissioner_phoneNum" type="text" placeholder="Commissioner Phone">
+					<button type="submit" class="button-confirm">Confirm Changes</button>
 				</form>
-				<div id="modify-details">
-					<div id="modify-table" class="search-result-table">
-						<div class="table-header">
-							<div>Commission ID</div>
-							<div>Commission Name</div>
-							<div>Issue Date</div>
-							<div>Due Date</div>
-							<div>Price</div>
-							<div>Image URL</div>
-						</div>
-						<div class="table-row">
-							<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores expedita laborum velit
-								tempora autem numquam tenetur neque quo voluptas vel at, perferendis placeat
-								exercitationem consequatur asperiores ex eos ullam veniam?</div>
-							<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores expedita laborum velit
-								tempora autem numquam tenetur neque quo voluptas vel at, perferendis placeat
-								exercitationem consequatur asperiores ex eos ullam veniam?</div>
-							<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores expedita laborum velit
-								tempora autem numquam tenetur neque quo voluptas vel at, perferendis placeat
-								exercitationem consequatur asperiores ex eos ullam veniam?</div>
-							<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores expedita laborum velit
-								tempora autem numquam tenetur neque quo voluptas vel at, perferendis placeat
-								exercitationem consequatur asperiores ex eos ullam veniam?</div>
-							<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores expedita laborum velit
-								tempora autem numquam tenetur neque quo voluptas vel at, perferendis placeat
-								exercitationem consequatur asperiores ex eos ullam veniam?</div>
-							<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores expedita laborum velit
-								tempora autem numquam tenetur neque quo voluptas vel at, perferendis placeat
-								exercitationem consequatur asperiores ex eos ullam veniam?</div>
-						</div>
-					</div>
-					<form action="" class="modify-form">
-						<p>Enter new details.<br>Leave blank if unchanged.</p>
-						<input type="text" placeholder="New Commission ID">
-						<input type="text" placeholder="New Commission Name">
-						<p>New Issue Date</p>
-						<input type="date" placeholder="New Issue Date">
-						<p>New Due Date</p>
-						<input type="date" placeholder="New Due Date">
-						<input type="number" placeholder="New Price">
-						<input type="Tag" placeholder="New Image URL">
-						<button type="button" class="button-confirm">Confirm Changes</button>
-					</form>
-				</div>
 			</div>
 		</div>
 	</main>

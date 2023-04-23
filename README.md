@@ -1,9 +1,9 @@
 # REVIF - Art Commission Site
 ## Introduction
 This project is a part of **ITCS212 Introduction to Web Programming** course at MUICT.
-See the project repository on [GitHub](https://github.com/pmwatt/muict-webprog.git) and live preview on [GitHub Pages](https://pmwatt.github.io/muict-revif/).
+See the project repository on [GitHub](https://github.com/pmwatt/muict-webprog.git).
 
-This project was inspired from sites such as [Fiverr](https://www.fiverr.com/) and [Deviant](https://www.deviantart.com/).
+This project was inspired from sites such as [Fiverr](https://www.fiverr.com/) and [DeviantArt](https://www.deviantart.com/).
 
 ## Group Members
 6488035	Teerut	Krachangpoj<br>
@@ -15,7 +15,16 @@ This project was inspired from sites such as [Fiverr](https://www.fiverr.com/) a
 ## Remarks
 ### How to run/start web application
 1. Extract the project ZIP file.
-2. Open the `index.html` file in the root folder of the extracted project folder to open the home page.
+2. Navigate to the project directory `muict-revif`.
+4. Use MySQL workbench to run `/sec/sql/revif.sql`. This will create database and tables with starter records.
+3. Set up MySQL workbench user privileges for SELECT/INSERT/UPDATE/DELETE as the following
+   1. Toolbar > Server > User and Privileges > Add Account
+   2. Set up **Login Name** and **Password**, and copy them into the project folder's `.env`'s `MYSQL_USERNAME` and `MYSQL_PASSWORD`
+   3. Schema Privileges > Add Entry... > Select schema `revif` > OK
+   4. Object Rights > toggle SELECT, INSERT, UPDATE, DELETE
+   5. Apply
+4. Run `npm start` to run nodemon.
+5. Open web browser, and type `localhost:3030` into the search bar.
 
 ### Content in Brief
 1. Home Page (`index.html`)

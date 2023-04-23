@@ -61,8 +61,12 @@ router.get('/admin-management', (req, res) => {
     res.sendFile(path.join(__dirname, "/src/html/admin-management.html"));
 });
 
+//////////////////////
+// ADMIN MANAGEMENT API
+
 // admin's ADD form submission
 router.post('/admin-insert-submit', (req, res) => {
+    // obtain form data
     let adminInfo = {
         username: req.body.username,
         fname: req.body.fn,
@@ -78,7 +82,7 @@ router.post('/admin-insert-submit', (req, res) => {
         lastLoginDate: req.body.lastLogin
     }
 
-    // check if exists
+    // check if undefined or not
     if (!adminInfo || !adminLogin) {
         return res.status(400).send({
             error: true,
@@ -104,6 +108,7 @@ router.post('/admin-insert-submit', (req, res) => {
 
 // admin's DELETE form submission
 router.delete('/admin-remove-submit', (req, res) => {
+    // obtain form data
     let username = req.body.username;
 
     // check if undefined or not
@@ -113,6 +118,8 @@ router.delete('/admin-remove-submit', (req, res) => {
             message: 'Please provide username'
         });
     }
+
+    // consider checking whether username exists in db
 
     // must delete from both tables, starting with foreign one first (admin_login)
     connection.query("DELETE FROM admin_login WHERE username = ?", username, (error, results) => {
@@ -130,6 +137,7 @@ router.delete('/admin-remove-submit', (req, res) => {
 
 // admin's UPDATE form submission
 router.put('/admin-update-submit', (req, res) => {
+    // obtain form data
     let username = req.body.username;
     let adminInfo = {
         "fname": req.body.fn,
@@ -152,7 +160,9 @@ router.put('/admin-update-submit', (req, res) => {
         });
     }
 
-    //
+    // consider checking whether username exists in db
+
+    // updates both tables
     connection.query("UPDATE admin_info SET ? WHERE username = ?", [adminInfo, username], (error, results) => {
         if (error) throw error;
         connection.query("UPDATE admin_login SET ? WHERE username = ?", [adminLogin, username], (error, results) => {
@@ -166,19 +176,35 @@ router.put('/admin-update-submit', (req, res) => {
     });
 });
 
+////////////////////////////
+
+////////////////////////////
+// COMMISSION MANAGEMENT API
+
+// commission's ADD form submission
+router.post('/commission-insert-submit', (req,res) => {
+
+});
+
+// commission's REMOVE form submission
+router.delete('/commission-remove-submit', (req,res) => {
+
+});
+
+// commission's UPDATE form submission
+router.put('/commission-update-submit', (req,res) => {
+
+});
+
+////////////////////////////
+
 router.get('/commission-management', (req, res) => {
     res.statusCode = 200;
     res.sendFile(path.join(__dirname, "/src/html/commission-management.html"));
 });
 
-// not found
-// router.get('*', (req, res) => {
-//     res.statusCode = 404;
-//     res.sendFile(path.join(__dirname, "/src/html/error.html"));
-// });
-
 /////////////////////////////////////
 
 app.listen(process.env.PORT, () => {
     console.log(`Listening on port ${process.env.PORT}`);
-})
+});
