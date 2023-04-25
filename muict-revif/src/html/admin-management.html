@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/global/global.css">
+	<link rel="stylesheet" href="/global/navbars.css">
+	<link rel="stylesheet" href="/global/header-footer.css">
+	<link rel="stylesheet" href="/user-account-management-admin.css">
+	<title>User Management</title>
+</head>
+
+<body>
+	<nav class="admin-navbar">
+		<ul>
+			<li><a href="/">Back</a></li>
+		</ul>
+		<ul>
+			<li><a href="#">Admin Management</a></li>
+			<li><a href="/commission-management">Commission Management</a></li>
+		</ul>
+	</nav>
+	<header>
+		<h1>Admin Account Management</h1>
+	</header>
+	<main>
+		<div class="admin-menu">
+			<button onclick="openMenu('admin-search')" class="admin-menu-button" type="button">SEARCH</button>
+			<button onclick="openMenu('admin-add')" class="admin-menu-button" type="button">ADD</button>
+			<button onclick="openMenu('admin-remove')" class="admin-menu-button" type="button">REMOVE</button>
+			<button onclick="openMenu('admin-modify')" class="admin-menu-button" type="button">MODIFY</button>
+		</div>
+		<div class="admin-forms">
+			<div class="menu" , id="admin-search">
+				<h2>Search Admin</h2>
+				<form class="search-form">
+					<div class="admin-search-criteria">
+						<label for="fn">First name: </label>
+						<input type="text" id="search-fn" placeholder="Search Here">
+
+						<label for="ln">Last Name: </label>
+						<input type="text" id="search-ln" placeholder="Search Here">
+
+						<label for="email">Email: </label>
+						<input type="text" id="search-email" placeholder="Search Here">
+						<button onclick="search()" type="button" class="button-search">Search</button>
+					</div>
+				</form>
+				<div id="results">
+
+				</div>
+			</div>
+			<div class="menu" id="admin-add">
+				<h2>Add New Admin</h2>
+				<form>
+					<p>Username (unique only)</p>
+					<input id="insert-username" name="username" type="text" placeholder="Username" required>
+					<p>First name</p>
+					<input id="insert-fn" name="fn" type="text" placeholder="First Name" required>
+					<p>Last name</p>
+					<input id="insert-ln" name="ln" type="text" placeholder="Last Name" required>
+					<p>Date of Birth</p>
+					<input id="insert-dob" name="dob" type="date" placeholder="DOB" required>
+					<p>Phone</p>
+					<input id="insert-phone" name="phone" type="text" placeholder="Phone No." required>
+					<p>email (unique only)</p>
+					<input id="insert-email" name="email" type="text" placeholder="Email" required>
+					<p>password</p>
+					<input id="insert-pwd" name="pwd" type="password" placeholder="Password" required>
+					<p>role</p>
+					<input id="insert-role" name="role" type="text" placeholder="Role" required>
+					<p>Last Login Date</p>
+					<input id="insert-lastLogin" name="lastlogin" type="date" placeholder="Last Login Date" required>
+					<button onclick="insert()" type="button" class="button-confirm">Confirm Add</button>
+				</form>
+			</div>
+			<div class="menu" id="admin-remove">
+				<h2>Remove Admin</h2>
+				<form class="search-form">
+					<p>username</p>
+					<input id="remove-username" name="username" type="text" placeholder="Username">
+					<button onclick="remove()" type="button" class="button-confirm">Confirm Remove</button>
+				</form>
+			</div>
+			<div class="menu" id="admin-modify">
+				<h2>Modify Admin</h2>
+				<form class="search-form">
+					<p>username (unique only)</p>
+					<input id="update-username" name="username" type="text" placeholder="Username">
+					<p>first name</p>
+					<input id="update-fn" name="fn" type="text" placeholder="First Name">
+					<p>last name</p>
+					<input id="update-ln" name="ln" type="text" placeholder="Last Name">
+					<p>Date of Birth</p>
+					<input id="update-dob" name="dob" type="date" placeholder="DOB">
+					<p>phone</p>
+					<input id="update-phone" name="phone" type="text" placeholder="Phone No.">
+					<p>email (unique only)</p>
+					<input id="update-email" name="email" type="text" placeholder="Email">
+					<p>password</p>
+					<input id="update-pwd" name="pwd" type="password" placeholder="Password">
+					<p>role</p>
+					<input id="update-role" name="role" type="text" placeholder="Role">
+					<p>Last Login Date</p>
+					<input id="update-lastLogin" name="lastlogin" type="date" placeholder="Last Login Date">
+					<button onclick="update()" type="button" class="button-confirm">Confirm Changes</button>
+				</form>
+			</div>
+		</div>
+	</main>
+
+	<footer>
+		<p>Copyright 2023 TPTPT Co. Ltd. All Rights Reserved</p>
+	</footer>
+</body>
+<!-- <script src="toggle-admin-management-details.js"></script> -->
+<script src="toggle-admin-menu.js"></script>
+<script>
+	// search
+	function search() {
+		let url = 'http://localhost:3000/admin-search-submit?' + new URLSearchParams({
+				fname: document.getElementById('search-fn').value,
+				lname: document.getElementById('search-ln').value,
+				email: document.getElementById('search-email').value
+			})
+			console.log(url)
+			let response = fetch(url)
+				.then(res => res.json())
+				.then(json => {
+					let results = document.getElementById('results');
+
+					// consider removing previous search
+					while (results.firstElementChild) {
+						results.firstElementChild.remove();
+					}
+
+					let adminUl= document.createElement('ul');
+					console.log(json)
+					json.forEach(element => {
+						let adminLi = document.createElement('li');
+						adminLi.innerHTML = 'id: ' + element.username + '<br>'
+							+ 'fn: ' + element.fname + '<br>'
+							+ 'ln: ' + element.lname + '<br>'
+							+ 'dob: ' + element.DOB + '<br>'
+							+ 'phone: ' + element.phone + '<br>'
+							+ 'email: ' + element.email + '<br>';
+							+ 'pwd: ' + element.pwd + '<br>';
+							+ 'role: ' + element.adminRole + '<br>';
+							+ 'last login: ' + element.lastLoginDate + '<br>';
+						adminUl.append(adminLi);
+					});
+					results.append(adminUl);
+				})
+	}
+
+	// insert
+	async function insert() {
+		let url = 'http://localhost:3000/admin-insert-submit';
+		let response = await fetch(url, {
+			headers: {
+				'Accept': 'application/json',
+				'Content-Type': 'application/json'
+			},
+			method: 'POST',
+			body: JSON.stringify({
+				username: document.getElementById('insert-username').value,
+				fn: document.getElementById('insert-fn').value,
+				ln: document.getElementById('insert-ln').value,
+				dob: document.getElementById('insert-dob').value,
+				phone: document.getElementById('insert-phone').value,
+				email: document.getElementById('insert-email').value,
+				pwd: document.getElementById('insert-pwd').value,
+				adminRole: document.getElementById('insert-role').value,
+				lastLogin: document.getElementById('insert-lastLogin').value,
+			})
+		});
+		if (!response.ok) {
+			throw new Error(`HTTP error ${response.status}`);
+		}
+
+		const data = await response.json();
+		alert(data.message);
+	}
+
+	// update
+	async function update() {
+		let url = 'http://localhost:3000/admin-update-submit';
+		let response = await fetch(url, {
+			headers: {
+				'Accept': 'application/json',
+				'Content-Type': 'application/json'
+			},
+			method: 'PUT',
+			body: JSON.stringify({
+				username: document.getElementById('update-username').value,
+				fn: document.getElementById('update-fn').value,
+				ln: document.getElementById('update-ln').value,
+				dob: document.getElementById('update-dob').value,
+				phone: document.getElementById('update-phone').value,
+				email: document.getElementById('update-email').value,
+				pwd: document.getElementById('update-pwd').value,
+				adminRole: document.getElementById('update-role').value,
+				lastLogin: document.getElementById('update-lastLogin').value,
+			})
+		});
+		if (!response.ok) {
+			throw new Error(`HTTP error ${response.status}`);
+		}
+
+		const data = await response.json();
+		alert(data.message);
+	}
+
+	// delete
+	async function remove() {
+		let url = 'http://localhost:3000/admin-remove-submit';
+		let response = await fetch(url, {
+			headers: {
+				'Accept': 'application/json',
+				'Content-Type': 'application/json'
+			},
+			method: 'DELETE',
+			body: JSON.stringify({
+				username: document.getElementById('remove-username').value,
+			})
+		});
+		if (!response.ok) {
+			throw new Error(`HTTP error ${response.status}`);
+		}
+
+		const data = await response.json();
+		alert(data.message);
+	}
+</script>
+
+</html>

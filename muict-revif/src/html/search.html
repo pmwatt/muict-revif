@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="global/global.css">
+	<!--Internal CSS for global elements such nav bar, header, and footer-->
+	<link rel="stylesheet" href="global/navbars.css">
+	<link rel="stylesheet" href="global/header-footer.css">
+	<link rel="stylesheet" href="search.css"> <!--Internal CSS for search.html specifically-->
+	<title>Search</title>
+</head>
+
+<body>
+	<nav class="user-navbar">
+		<!--Nav bar for navigating to other pages in the website which is in the same format as other pages-->
+		<ul>
+			<li><a href="/">Home</a></li>
+			<li><a href="aboutus">About Us</a></li>
+			<li><a href="search">Search</a></li>
+		</ul>
+		<ul>
+			<li><a href="login">Staff Portal</a></li>
+		</ul>
+	</nav>
+	<header> <!--Heading for idicating current page which is in the same format as other pages-->
+		<h1>Search</h1>
+	</header>
+	<section class="search"> <!--A section mainly for search bar with couple decorative text-->
+		<div class="text"> <!--Decorative text for clarification-->
+			<h1>Looking for a commission?</h1>
+			<h1>Search here!</h1>
+		</div>
+		<div class="search-container"> <!--flex container for search bar-->
+			<form class="search-bar"> <!--The Search bar-->
+				<!--<input type="checkbox" name="commission-name" id="">-->
+				<label for="commission_name">Commission Name: </label>
+				<input class="criteria-bar" type="text" id="commission_name" placeholder="Search Here">
+				<!--<input type="checkbox" name="artist-name" id="">-->
+				<label for="artist_name">email: </label>
+				<input class="criteria-bar" type="text" id="email" placeholder="Search Here">
+				<!--<input type="checkbox" name="price" id="">-->
+				<label for="price">Price: </label>
+				<input class="criteria-bar" type="text" id="price" placeholder="Search Here">
+				<button type="button" onclick="search()" class="button-search" type="submit">Search</button>
+				<!--Button element to activate search engine-->
+			</form>
+		</div>
+	</section>
+	<section>
+		<div id="results" style="background-color: black;">
+
+		</div>
+	</section>
+
+	<footer> <!--Footer section for technical information which is also in the same format as other pages-->
+		<p>Copyright 2023 TPTPT Co. Ltd. All Rights Reserved</p>
+	</footer>
+	<script>
+		function search() {
+			let url = 'http://localhost:3000/commission-search-submit?' + new URLSearchParams({
+				commission_name: document.getElementById('commission_name').value,
+				email: document.getElementById('email').value,
+				price: document.getElementById('price').value
+			})
+			let response = fetch(url)
+				.then(res => res.json())
+				.then(json => {
+					const results = document.getElementById('results');
+
+					// remove old search results
+                    while (results.firstElementChild) {
+                        results.firstElementChild.remove();
+                    }
+
+					let commissionUl = document.createElement('ul');
+					console.log(json)
+
+					json.forEach(element => {
+						let commissionLi = document.createElement('li');
+						commissionLi.innerHTML = 'id: ' + element.commission_id + '<br>'
+							+ 'name: ' + element.commission_name + '<br>'
+							+ 'issue: ' + element.issue_date + '<br>'
+							+ 'due: ' + element.due_date + '<br>'
+							+ 'price: ' + element.price + '<br>'
+							+ 'email: ' + element.commissioner_email + '<br>'
+							+ 'phone: ' + element.commissioner_phoneNum;
+						let commissionImg = document.createElement('img');
+						commissionImg.setAttribute('src', `${element.imageURL}`);
+						commissionImg.setAttribute('width', '70%');
+						commissionLi.append(commissionImg);
+						commissionUl.append(commissionLi);
+					});
+					results.append(commissionUl);
+				})
+		}
+	</script>
+</body>
+<!-- <script src="toggle-search-result.js"></script> -->
+
+
+</html>
