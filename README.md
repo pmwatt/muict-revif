@@ -14,18 +14,19 @@ This project was inspired from sites such as [Fiverr](https://www.fiverr.com/) a
 
 ## Remarks
 ### How to run/start web application
-1. Extract the project ZIP file.
-2. Navigate to two of the project directories: `muict-revif` and `ws`. Briefly, `muict-revif` is dedicated to routing pages path and fetching, whereas `ws` is dedicated to running web services.
+1. Extract the project ZIP file. You should see 2 folders named `sec2_gr4_ws_src` and `sec2_gr4_src`, as well as this `README.txt` and `sec2_gr4_database.sql`.
+2. Navigate to two of the directories using separated terminals: `sec2_gr4_ws_src` and `sec2_gr4_src`. Briefly, `sec2_gr4_src` is dedicated to routing pages path and fetching, whereas `sec2_gr4_ws_src` is dedicated to running backend web services such as INSERT/UPDATE/DELETE/ETC.
+3. Install dependencies in both directories.
 4. Use MySQL workbench to run `sec2_gr4_database.sql` (located in the root). This will create database and tables with starter records.
-3. Set up MySQL workbench user privileges for SELECT/INSERT/UPDATE/DELETE as the following
+5. Set up MySQL workbench user privileges for SELECT/INSERT/UPDATE/DELETE as the following
    1. Toolbar > Server > User and Privileges > Add Account
    2. Set up **Login Name** and **Password**, and copy them into both of the project folder's `.env`'s `MYSQL_USERNAME` and `MYSQL_PASSWORD`
    3. Schema Privileges > Add Entry... > Select schema `revif` > OK
    4. Object Rights > toggle SELECT, INSERT, UPDATE, DELETE
    5. Apply
-4. Run `npm start` inside `muict-revif` directory to run nodemon for the pages web server. This web server's PORT should be `3030`.
-5. Run `npm start` inside `ws` directory to run backend web server containing web services such as insert/select/delete/update (and login too). This web server's PORT should be `3000`.
-6. Open web browser, and type `localhost:3030` into the search bar to open the homme page (`index.html`).
+6. Run `npm start` inside `sec2_gr4_src` directory to run nodemon for the pages web server. This web server's PORT should be `3030`.
+7. Run `npm start` inside `sec2_gr4_ws_src` directory to run backend web server containing web services such as insert/select/delete/update (and login too). This web server's PORT should be `3000`.
+8. Open web browser, and type `localhost:3030` into the search bar to open the home page (`index.html`) by routing to `/`.
 
 ### Content in Brief
 
