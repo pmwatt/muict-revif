@@ -162,7 +162,7 @@ router.get('/admin-search-submit', (req, res) => {
 
 // Testing insert a new admin
 // method: POST
-// URL: http://localhost:3030/admin-insert-submit
+// URL: http://localhost:3000/admin-insert-submit
 // body: raw JSON
 // {
 //     "username": "jakesulley1",
@@ -226,7 +226,7 @@ router.post('/admin-insert-submit', (req, res) => {
 
 // Testing admin deletion
 // method: DELETE
-// URL: http://localhost:3030/admin-remove-submit
+// URL: http://localhost:3000/admin-remove-submit
 // body: raw JSON
 // {
 //     "username": "hakunamatata"
@@ -277,7 +277,7 @@ router.delete('/admin-remove-submit', (req, res) => {
 
 // Testing admin update
 // method: PUT
-// URL: http://localhost:3030/admin-update-submit
+// URL: http://localhost:3000/admin-update-submit
 // body: raw JSON
 // {
 //     "username": "gordonrando123",
