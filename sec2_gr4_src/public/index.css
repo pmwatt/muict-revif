@@ -1,0 +1,99 @@
+/* for usage with index.html */
+
+/* apply basic dark theme to main section */
+main {
+    background-color: black;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-weight: lighter;
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 50px;
+}
+
+main img {
+    width: 65%;
+    border-radius: 10px;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+section.review {
+    /* cool mini-scrolling effect */
+    max-height: 500px;
+    overflow-y: scroll;
+    /* -------------------------- */
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+section.review p {
+    font-size: small;
+    width: auto;
+}
+
+section.review article {
+    background-color: rgb(49, 49, 49);
+    border-radius: 20px;
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: 40%;
+}
+
+.profile {
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    padding: 20px;
+    object-fit: cover;
+}
+
+section.review p {
+    background-color: rgb(49, 49, 49);
+}
+
+@media screen and (max-width: 728px) {
+    section.review article {
+        flex-basis: 100%;
+    }
+}
+
+/* general text decoration, just to fit the theme */
+main p {
+    background-color: rgb(32, 32, 32);
+    padding: 5%;
+    border-radius: 10px;
+    text-align: center;
+    width: 60%;
+    line-height: 40px;
+}
+
+main button {
+    width: 90px;
+    height: 55px;
+    background-color: rgb(0, 205, 133);
+    color: white;
+    border: 0;
+    border-radius: 7px;
+}
+
+button a {
+    text-decoration: none;
+    color: white;
+}
