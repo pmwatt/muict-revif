@@ -5,6 +5,11 @@ See the project repository on [GitHub](https://github.com/pmwatt/muict-webprog.g
 
 This project was inspired from sites such as [Fiverr](https://www.fiverr.com/) and [DeviantArt](https://www.deviantart.com/).
 
+![image](https://github.com/pmwatt/muict-revif/assets/87473156/d6a1bf3f-c015-4dbb-be23-eaa20593eff4)
+![image](https://github.com/pmwatt/muict-revif/assets/87473156/9262116b-3289-4bde-80d2-03ec12c2ae72)
+![image](https://github.com/pmwatt/muict-revif/assets/87473156/49944dcd-1b4a-408e-af0f-c349b1230ae2)
+
+
 ## Group Members
 6488035	Teerut	Krachangpoj<br>
 6488125	Phutthikanj	Kitivoranondh<br>
@@ -31,14 +36,14 @@ This project was inspired from sites such as [Fiverr](https://www.fiverr.com/) a
 ### Content in Brief
 
 1. Home Page (`index.html`)
-   1. The followwing CSS are applied:
+   1. The following CSS are applied:
       1. `navbars.css`
       2. `global.css`
       3. `header-footer.css`
       4. `index.css`
    2. This page uses 3rd Party api to generate quotes related to art. See [their website](https://api-ninjas.com/api/quotes) for more details.
 2. Login Page (`login-admin.html`)
-   1. The followwing CSS are applied:
+   1. The following CSS are applied:
       1. `navbars.css`
       2. `global.css`
       3. `header-footer.css`
@@ -47,14 +52,14 @@ This project was inspired from sites such as [Fiverr](https://www.fiverr.com/) a
    3. This page verifies authentication using GET request.
    4. It might not be the best or the most secured solution as username and password are passed directly in the URL in the fetch request.
 3. Search Page (`search.html`)
-   1. The followwing CSS are applied:
+   1. The following CSS are applied:
       1. `navbars.css`
       2. `global.css`
       3. `header-footer.css`
       4. `search.css`
    2. This serves as a page for user to call commission search web service using 3 criteria.
 4. Commission Service Management (`commission-management-admin.html`)
-   1. The followwing CSS are applied:
+   1. The following CSS are applied:
       1. `navbars.css`
       2. `global.css`
       3. `header-footer.css`
@@ -63,7 +68,7 @@ This project was inspired from sites such as [Fiverr](https://www.fiverr.com/) a
       1. `toggle-admin-menu.js` to switch between SEARCH/ADD/REMOVE/MODIFY tabs.
    3. This serves as a management page for admin to add/remove/modify commission data.
 5. User Account Management (`admin-management-admin.html`)
-   1. The followwing CSS are applied:
+   1. The following CSS are applied:
       1. `navbars.css`
       2. `global.css`
       3. `header-footer.css`
@@ -72,7 +77,7 @@ This project was inspired from sites such as [Fiverr](https://www.fiverr.com/) a
       1. `toggle-admin-menu.js` to switch between SEARCH/ADD/REMOVE/MODIFY tabs.
    3. This serves as a management page for admin to add/remove/modify user data.
 6. About Us (`about-us.html`)
-   1. The followwing CSS are applied:
+   1. The following CSS are applied:
       1. `navbars.css`
       2. `global.css`
       3. `header-footer.css`
