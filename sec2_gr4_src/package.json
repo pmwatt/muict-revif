@@ -4,7 +4,8 @@
   "description": "This project is a part of **ITCS212 Introduction to Web Programming** course at MUICT.\r See the project repository on [GitHub](https://github.com/pmwatt/muict-webprog.git) and live preview on [GitHub Pages](https://pmwatt.github.io/muict-revif/).",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "nodemon index.js",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
