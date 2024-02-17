@@ -1,8 +1,5 @@
 # REVIF - Art Commission Site
 ## Introduction
-This project is a part of **ITCS212 Introduction to Web Programming** course at MUICT.
-See the project repository on [GitHub](https://github.com/pmwatt/muict-webprog.git).
-
 This project was inspired from sites such as [Fiverr](https://www.fiverr.com/) and [DeviantArt](https://www.deviantart.com/).
 
 ![image](https://github.com/pmwatt/muict-revif/assets/87473156/d6a1bf3f-c015-4dbb-be23-eaa20593eff4)
@@ -10,27 +7,27 @@ This project was inspired from sites such as [Fiverr](https://www.fiverr.com/) a
 ![image](https://github.com/pmwatt/muict-revif/assets/87473156/49944dcd-1b4a-408e-af0f-c349b1230ae2)
 
 
-## Group Members
-6488035	Teerut	Krachangpoj<br>
-6488125	Phutthikanj	Kitivoranondh<br>
-6488160	Prachnachai	Meakpaiboonwattana <br>
-6488162	Thachchai	Pattamasrirattana<br>
-6488221	Thai	Mekractanavorakul<br>
+## Contributors
+Teerut	Krachangpoj<br>
+Phutthikanj	Kitivoranondh<br>
+Prachnachai	Meakpaiboonwattana <br>
+Thachchai	Pattamasrirattana<br>
+Thai	Mekractanavorakul<br>
 
 ## Remarks
 ### How to run/start web application
-1. Extract the project ZIP file. You should see 2 folders named `sec2_gr4_ws_src` and `sec2_gr4_src`, as well as `sec2_gr4_database.sql`.
-2. Navigate to two of the directories using separated terminals: `sec2_gr4_ws_src` and `sec2_gr4_src`. Briefly, `sec2_gr4_src` is dedicated to routing pages path and fetching, whereas `sec2_gr4_ws_src` is dedicated to running backend web services such as INSERT/UPDATE/DELETE/ETC.
-3. Install dependencies in both directories.
-4. Use MySQL workbench to run `sec2_gr4_database.sql` (located in the root). This will create database and tables with starter records.
+1. Extract the project ZIP file. You should see 2 folders named `backend` and `frontend`, as well as `database.sql`.
+2. Navigate to two of the directories using separated terminals: `backend` and `frontend`. Briefly, `frontend` is dedicated to routing pages path and fetching, whereas `backend` is dedicated to running backend web services such as INSERT/UPDATE/DELETE/ETC.
+3. Install dependencies in both directories using `npm install`.
+4. Use MySQL workbench to run `database.sql` (located in the root). This will create database and tables with starter records.
 5. Set up MySQL workbench user privileges for SELECT/INSERT/UPDATE/DELETE as the following
    1. Toolbar > Server > User and Privileges > Add Account
    2. Set up **Login Name** and **Password**, and copy them into both of the project folder's `.env`'s `MYSQL_USERNAME` and `MYSQL_PASSWORD`
    3. Schema Privileges > Add Entry... > Select schema `revif` > OK
    4. Object Rights > toggle SELECT, INSERT, UPDATE, DELETE
    5. Apply
-6. Run `npm start` inside `sec2_gr4_src` directory to run nodemon for the pages web server. This web server's PORT should be `3030`.
-7. Run `npm start` inside `sec2_gr4_ws_src` directory to run backend web server containing web services such as insert/select/delete/update (and login too). This web server's PORT should be `3000`.
+6. Run `npm start` inside `frontend` directory to run nodemon for the pages web server. This web server's PORT should be `3030`.
+7. Run `npm start` inside `backend` directory to run backend web server containing web services such as insert/select/delete/update (and login too). This web server's PORT should be `3000`.
 8. Open web browser, and type `localhost:3030` into the search bar to open the home page (`index.html`) by routing to `/`.
 
 ### Content in Brief
@@ -88,7 +85,7 @@ This project was inspired from sites such as [Fiverr](https://www.fiverr.com/) a
 
 - Most of the pages have been implemented so that they can be viewed on mobile. However, this is not guaranteed to apply for all pages. We have tested on the default Laptop screen, iPhone XR and iPhone 5/SE screen.
 - Some web services did not check for duplicates automatically. They may fail due to duplicated entries or some fields being forced to be unique.
-- This includes admin's `email` and `username`, as well as commission's `commission_id`. See `sec2_gr4_database.sql` to check their requirements.
+- This includes admin's `email` and `username`, as well as commission's `commission_id`. See `database.sql` to check their requirements.
 
 ### References
 
