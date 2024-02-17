@@ -6,19 +6,11 @@ This project was inspired from sites such as [Fiverr](https://www.fiverr.com/) a
 ![image](https://github.com/pmwatt/muict-revif/assets/87473156/9262116b-3289-4bde-80d2-03ec12c2ae72)
 ![image](https://github.com/pmwatt/muict-revif/assets/87473156/49944dcd-1b4a-408e-af0f-c349b1230ae2)
 
-
-## Contributors
-Teerut	Krachangpoj<br>
-Phutthikanj	Kitivoranondh<br>
-Prachnachai	Meakpaiboonwattana <br>
-Thachchai	Pattamasrirattana<br>
-Thai	Mekractanavorakul<br>
-
 ## Remarks
 ### How to run/start web application
 1. Extract the project ZIP file. You should see 2 folders named `backend` and `frontend`, as well as `database.sql`.
 2. Navigate to two of the directories using separated terminals: `backend` and `frontend`. Briefly, `frontend` is dedicated to routing pages path and fetching, whereas `backend` is dedicated to running backend web services such as INSERT/UPDATE/DELETE/ETC.
-3. Install dependencies in both directories using `npm install`.
+3. Install dependencies in both directories (`frontend` and `backend` separately) using `npm install`.
 4. Use MySQL workbench to run `database.sql` (located in the root). This will create database and tables with starter records.
 5. Set up MySQL workbench user privileges for SELECT/INSERT/UPDATE/DELETE as the following
    1. Toolbar > Server > User and Privileges > Add Account
